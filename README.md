@@ -51,6 +51,21 @@ To enable Google Calendar integration, you need to set up Google Sign-In for you
 9. Update the `webClientId` in `src/screens/main/CalendarScreen.tsx` with your web client ID from the Google Cloud Console
 
 ### Running the App
+
+#### Quick Testing with Expo Go (Recommended for Fast Development)
+1. Install dependencies: `npm install`
+2. Start the Expo dev server: `npm start`
+3. Scan the QR code with Expo Go app on your device
+4. **Note**: Google Calendar integration is disabled in Expo Go. All other features work normally.
+5. See `EXPO_GO_TESTING.md` for more details
+
+#### Full Build (For Testing Google Calendar)
+1. Install dependencies: `npm install`
+2. Create a development build: `eas build --profile development --platform android`
+3. Install the build on your device
+4. All features including Google Calendar will work
+
+#### Traditional React Native CLI (Alternative)
 1. Install dependencies: `npm install`
 2. For iOS: `npx pod-install` (in the ios directory)
 3. Start the Metro bundler: `npm start`

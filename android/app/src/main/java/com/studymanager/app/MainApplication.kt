@@ -1,4 +1,4 @@
-package com.studymanager
+package com.studymanager.app
 
 import com.oblador.vectoricons.VectorIconsPackage;
 

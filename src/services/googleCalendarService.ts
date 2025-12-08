@@ -1,4 +1,4 @@
-import { GoogleSignin } from '@react-native-google-signin/google-signin';
+import { GoogleSignin } from '../utils/googleSignInConfig';
 import axios from 'axios';
 import { GoogleCalendarEvent } from '../types';
 

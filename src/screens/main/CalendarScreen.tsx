@@ -11,7 +11,7 @@ import {
 } from 'react-native';
 import { Calendar } from 'react-native-calendars';
 import Icon from 'react-native-vector-icons/MaterialIcons';
-import { GoogleSignin, statusCodes, isSuccessResponse } from '@react-native-google-signin/google-signin';
+import { GoogleSignin, statusCodes, isSuccessResponse, isExpoGo } from '../../utils/googleSignInConfig';
 import { useAuth } from '../../context/AuthContext';
 import { Task } from '../../types';
 import TaskService from '../../services/taskService';
@@ -127,6 +127,20 @@ const CalendarScreen = ({ navigation }: any) => {
   };
 
   const connectGoogleCalendar = async () => {
+    // Show helpful message if running in Expo Go
+    if (isExpoGo) {
+      Alert.alert(
+        'Feature Not Available',
+        'Google Calendar integration requires a development build or release build.\n\n' +
+        'To test this feature:\n' +
+        '1. Create a development build: eas build --profile development\n' +
+        '2. Or create a release build: eas build --profile production\n\n' +
+        'All other features work in Expo Go!',
+        [{ text: 'OK' }]
+      );
+      return;
+    }
+
     try {
       // Configure Google Sign-In first
       GoogleSignin.configure({
@@ -168,6 +182,16 @@ const CalendarScreen = ({ navigation }: any) => {
 
 
   const syncToGoogleCalendar = async (task: Task) => {
+    // Show helpful message if running in Expo Go
+    if (isExpoGo) {
+      Alert.alert(
+        'Feature Not Available',
+        'Google Calendar sync requires a development build or release build. See EXPO_GO_TESTING.md for details.',
+        [{ text: 'OK' }]
+      );
+      return;
+    }
+
     if (!isGoogleConnected || !user?.google_calendar_token) {
       Alert.alert('Error', 'Please connect Google Calendar first');
       return;
@@ -354,7 +378,7 @@ const CalendarScreen = ({ navigation }: any) => {
           <View style={styles.calendarContainer}>
             <Calendar
               current={selectedDate}
-              onDayPress={(day) => {
+              onDayPress={(day: any) => {
                 setSelectedDate(day.dateString);
                 generateMarkedDates(tasks);
               }}

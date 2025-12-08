@@ -195,7 +195,7 @@ const ProfileScreen = ({ navigation }: any) => {
             
             <View style={styles.sectionContent}>
               <ProfileOption
-                icon="canvas"
+                icon="school"
                 title="Canvas Integration"
                 subtitle={user?.canvas_url ? 'Connected' : 'Not connected'}
                 color="#8B5CF6"

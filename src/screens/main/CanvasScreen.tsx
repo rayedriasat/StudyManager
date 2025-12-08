@@ -264,12 +264,12 @@ const CanvasScreen = ({ navigation }: any) => {
                   : `Due in ${dueIn} days`
               }
             </Text>
-            {assignment.points_possible && (
+            {assignment.points_possible ? (
               <>
                 <Icon name="star" size={16} color="#F59E0B" style={{ marginLeft: 16 }} />
                 <Text style={styles.points}>{assignment.points_possible} pts</Text>
               </>
-            )}
+            ) : null}
           </View>
         )}
       </Animated.View>
@@ -450,7 +450,7 @@ const CanvasScreen = ({ navigation }: any) => {
           </View>
 
           {/* Sync Actions */}
-          {assignments.length > 0 && (
+          {assignments.length > 0 ? (
             <View style={styles.syncContainer}>
               <TouchableOpacity
                 style={styles.syncAllButton}
@@ -460,7 +460,7 @@ const CanvasScreen = ({ navigation }: any) => {
                 <Text style={styles.syncAllText}>Sync All Assignments</Text>
               </TouchableOpacity>
             </View>
-          )}
+          ) : null}
 
           {/* Assignments */}
           <View style={styles.assignmentsSection}>
