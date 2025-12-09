@@ -5,11 +5,9 @@ import {
   StyleSheet,
   ScrollView,
   TouchableOpacity,
-  TextInput,
   Alert,
   Animated,
   RefreshControl,
-  Modal,
   Linking,
 } from 'react-native';
 import { MaterialIcons as Icon } from '@expo/vector-icons';
@@ -20,15 +18,12 @@ import TaskService from '../../services/taskService';
 
 const CanvasScreen = ({ navigation }: any) => {
   const { user, updateUserProfile } = useAuth();
-  const [canvasUrl, setCanvasUrl] = useState(user?.canvas_url || '');
-  const [accessToken, setAccessToken] = useState(user?.canvas_token || '');
   const [courses, setCourses] = useState<CanvasCourse[]>([]);
   const [assignments, setAssignments] = useState<CanvasAssignment[]>([]);
   const [announcements, setAnnouncements] = useState<CanvasAnnouncement[]>([]);
   const [activeTab, setActiveTab] = useState<'assignments' | 'announcements'>('assignments');
   const [loading, setLoading] = useState(false);
   const [refreshing, setRefreshing] = useState(false);
-  const [showSetupModal, setShowSetupModal] = useState(false);
   const [isConnected, setIsConnected] = useState(false);
 
   const fadeAnim = useRef(new Animated.Value(0)).current;
@@ -122,37 +117,7 @@ const CanvasScreen = ({ navigation }: any) => {
   };
 
 
-  const setupCanvas = async () => {
-    if (!canvasUrl || !accessToken) {
-      Alert.alert('Error', 'Please fill in both Canvas URL and Access Token');
-      return;
-    }
 
-    try {
-      setLoading(true);
-      const canvasService = new CanvasService(canvasUrl, accessToken);
-      const isValid = await canvasService.validateToken();
-
-      if (isValid) {
-        await updateUserProfile({
-          canvas_url: canvasUrl,
-          canvas_token: accessToken,
-        });
-
-        setIsConnected(true);
-        setShowSetupModal(false);
-        Alert.alert('Success', 'Canvas has been connected successfully!');
-        await loadCanvasData();
-      } else {
-        Alert.alert('Error', 'Invalid Canvas URL or Access Token. Please check your credentials.');
-      }
-    } catch (error) {
-      console.error('Error setting up Canvas:', error);
-      Alert.alert('Error', 'Failed to connect to Canvas. Please try again.');
-    } finally {
-      setLoading(false);
-    }
-  };
 
   const syncAssignmentToTask = async (assignment: CanvasAssignment) => {
     try {
@@ -402,83 +367,10 @@ const CanvasScreen = ({ navigation }: any) => {
     );
   };
 
-  const SetupModal = () => (
-    <Modal
-      visible={showSetupModal}
-      transparent={true}
-      animationType="slide"
-      onRequestClose={() => setShowSetupModal(false)}
-    >
-      <View style={{ flex: 1, backgroundColor: 'rgba(0, 0, 0, 0.5)', justifyContent: 'center', alignItems: 'center', padding: 20 }}>
-        <View style={{ backgroundColor: '#FFFFFF', width: '90%', maxWidth: 500, borderRadius: 20, maxHeight: '90%', minHeight: 400, flexDirection: 'column', overflow: 'hidden', alignSelf: 'center' }}>
-          <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', padding: 20, borderBottomWidth: 1, borderBottomColor: '#F3F4F6' }}>
-            <Text style={{ fontSize: 18, fontWeight: 'bold', color: '#1F2937' }}>Canvas Setup</Text>
-            <TouchableOpacity
-              onPress={() => setShowSetupModal(false)}
-              style={{ padding: 4 }}
-            >
-              <Icon name="close" size={24} color="#6B7280" />
-            </TouchableOpacity>
-          </View>
-
-          <ScrollView
-            style={{ flex: 1 }}
-            contentContainerStyle={{ padding: 20 }}
-            showsVerticalScrollIndicator={false}
-          >
-            <Text style={{ fontSize: 14, color: '#6B7280', marginBottom: 20, lineHeight: 20 }}>
-              To connect Canvas, you'll need your Canvas URL and an Access Token.
-            </Text>
-
-            <View style={{ marginBottom: 16 }}>
-              <Text style={{ fontSize: 14, fontWeight: '500', color: '#1F2937', marginBottom: 8 }}>Canvas URL</Text>
-              <TextInput
-                style={{ borderWidth: 1, borderColor: '#E5E7EB', borderRadius: 8, padding: 12, fontSize: 16, backgroundColor: '#FFFFFF' }}
-                placeholder="https://your-school.instructure.com"
-                value={canvasUrl}
-                onChangeText={setCanvasUrl}
-                autoCapitalize="none"
-                autoComplete="url"
-                keyboardType="url"
-              />
-            </View>
-
-            <View style={{ marginBottom: 16 }}>
-              <Text style={{ fontSize: 14, fontWeight: '500', color: '#1F2937', marginBottom: 8 }}>Access Token</Text>
-              <TextInput
-                style={{ borderWidth: 1, borderColor: '#E5E7EB', borderRadius: 8, padding: 12, fontSize: 16, backgroundColor: '#FFFFFF' }}
-                placeholder="Enter your Canvas access token"
-                value={accessToken}
-                onChangeText={setAccessToken}
-                secureTextEntry={true}
-              />
-            </View>
-
-            <View style={{ backgroundColor: '#F8FAFC', borderRadius: 8, padding: 16, marginBottom: 24 }}>
-              <Text style={{ fontSize: 14, fontWeight: '600', color: '#1F2937', marginBottom: 8 }}>How to get your Access Token:</Text>
-              <Text style={{ fontSize: 12, color: '#6B7280', lineHeight: 18 }}>
-                1. Log into Canvas{'\n'}
-                2. Go to Account → Settings{'\n'}
-                3. Scroll to "Approved Integrations"{'\n'}
-                4. Click "+ New Access Token"{'\n'}
-                5. Copy the generated token
-              </Text>
-            </View>
-
-            <TouchableOpacity
-              style={{ backgroundColor: '#6366F1', borderRadius: 12, padding: 16, alignItems: 'center', marginBottom: 20, opacity: loading ? 0.7 : 1 }}
-              onPress={setupCanvas}
-              disabled={loading}
-            >
-              <Text style={{ color: '#FFFFFF', fontSize: 16, fontWeight: '600' }}>
-                {loading ? 'Connecting...' : 'Connect Canvas'}
-              </Text>
-            </TouchableOpacity>
-          </ScrollView>
-        </View>
-      </View>
-    </Modal>
-  );
+  const SetupModal = () => {
+    // Navigate to the dedicated setup screen instead
+    return null;
+  };
 
   if (!isConnected) {
     return (
@@ -500,17 +392,10 @@ const CanvasScreen = ({ navigation }: any) => {
 
           <TouchableOpacity
             style={styles.connectButton}
-            onPress={() => setShowSetupModal(true)}
+            onPress={() => navigation.navigate('CanvasSetup')}
           >
             <Icon name="link" size={20} color="#FFFFFF" />
             <Text style={styles.connectButtonText}>Connect to Canvas</Text>
-          </TouchableOpacity>
-
-          <TouchableOpacity
-            style={styles.learnMoreButton}
-            onPress={() => navigation.navigate('CanvasSetup')}
-          >
-            <Text style={styles.learnMoreText}>Learn More</Text>
           </TouchableOpacity>
         </Animated.View>
 
@@ -543,7 +428,7 @@ const CanvasScreen = ({ navigation }: any) => {
           <View style={styles.headerActions}>
             <TouchableOpacity
               style={styles.headerButton}
-              onPress={() => setShowSetupModal(true)}
+              onPress={() => navigation.navigate('CanvasSetup')}
             >
               <Icon name="settings" size={20} color="#6B7280" />
             </TouchableOpacity>
@@ -611,7 +496,7 @@ const CanvasScreen = ({ navigation }: any) => {
                     </View>
                     <TouchableOpacity
                       style={styles.actionButton}
-                      onPress={() => handleOpenLink(`${canvasUrl}/courses/${course.id}`)}
+                      onPress={() => handleOpenLink(`${user?.canvas_url}/courses/${course.id}`)}
                     >
                       <Icon name="open-in-browser" size={20} color="#6366F1" />
                     </TouchableOpacity>
@@ -680,7 +565,6 @@ const CanvasScreen = ({ navigation }: any) => {
           )}
         </ScrollView>
       </Animated.View>
-      <SetupModal />
     </View>
   );
 };
