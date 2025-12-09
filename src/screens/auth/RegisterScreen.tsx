@@ -99,7 +99,7 @@ const RegisterScreen = ({ navigation }: any) => {
               <Text style={styles.logoText}>📚</Text>
             </View>
             <Text style={styles.title}>Create Account</Text>
-            <Text style={styles.subtitle}>Join StudyManager to organize your studies</Text>
+            <Text style={styles.subtitle}>Join Syncora to organize your studies</Text>
           </View>
 
           {/* Form */}

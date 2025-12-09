@@ -66,10 +66,10 @@ const LoadingScreen = () => {
             <Text style={styles.logoText}>📚</Text>
           </View>
         </Animated.View>
-        
-        <Text style={styles.title}>StudyManager</Text>
+
+        <Text style={styles.title}>Syncora</Text>
         <Text style={styles.subtitle}>Organizing your academic journey</Text>
-        
+
         <View style={styles.dotsContainer}>
           {[0, 1, 2].map((index) => (
             <Animated.View

@@ -67,7 +67,9 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
         // User doesn't exist in users table, create one
         const { data: authUser } = await supabase.auth.getUser();
         if (authUser.user) {
-          await createUserProfile(authUser.user.id, authUser.user.email!, 'User');
+          // Get name from user metadata if available
+          const userName = authUser.user.user_metadata?.name || authUser.user.email?.split('@')[0] || 'User';
+          await createUserProfile(authUser.user.id, authUser.user.email!, userName);
           return;
         }
       }
@@ -99,7 +101,22 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
         .select()
         .single();
 
-      if (error) throw error;
+      if (error) {
+        // If duplicate key error, just fetch the existing profile instead
+        if (error.code === '23505') {
+          console.log('User profile already exists, fetching...');
+          const { data: existingUser } = await supabase
+            .from('users')
+            .select('*')
+            .eq('id', userId)
+            .single();
+          if (existingUser) {
+            setUser(existingUser);
+            return;
+          }
+        }
+        throw error;
+      }
       setUser(data);
     } catch (error) {
       console.error('Error creating user profile:', error);
@@ -127,10 +144,15 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
       const { data, error } = await supabase.auth.signUp({
         email,
         password,
+        options: {
+          data: {
+            name: name, // Store name in user metadata
+          },
+        },
       });
-      
+
       if (error) throw error;
-      
+
       if (data.user) {
         await createUserProfile(data.user.id, email, name);
       }
@@ -153,7 +175,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
 
   const updateUserProfile = async (updates: Partial<User>) => {
     if (!user) return;
-    
+
     try {
       const { data, error } = await supabase
         .from('users')
