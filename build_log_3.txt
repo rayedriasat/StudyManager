@@ -1,0 +1,1415 @@
+env: load .env
+env: export SUPABASE_URL SUPABASE_ANON_KEY GOOGLE_WEB_CLIENT_ID CANVAS_API_BASE_URL
+ΓÇ║ Building app...
+Configuration on demand is an incubating feature.
+> Task :gradle-plugin:settings-plugin:checkKotlinGradlePluginConfigurationErrors
+> Task :gradle-plugin:shared:checkKotlinGradlePluginConfigurationErrors
+> Task :gradle-plugin:shared:compileKotlin UP-TO-DATE
+> Task :gradle-plugin:shared:compileJava NO-SOURCE
+> Task :gradle-plugin:shared:processResources NO-SOURCE
+> Task :gradle-plugin:shared:classes UP-TO-DATE
+> Task :gradle-plugin:shared:jar UP-TO-DATE
+> Task :gradle-plugin:settings-plugin:compileKotlin UP-TO-DATE
+> Task :gradle-plugin:settings-plugin:compileJava NO-SOURCE
+> Task :gradle-plugin:settings-plugin:pluginDescriptors UP-TO-DATE
+> Task :gradle-plugin:settings-plugin:processResources UP-TO-DATE
+> Task :gradle-plugin:settings-plugin:classes UP-TO-DATE
+> Task :gradle-plugin:settings-plugin:jar UP-TO-DATE
+DEBUG: Autolinking applying plugin expo-dev-launcher-gradle-plugin from module expo-dev-launcher
+> Task :gradle-plugin:react-native-gradle-plugin:checkKotlinGradlePluginConfigurationErrors
+> Task :expo-dev-launcher-gradle-plugin:checkKotlinGradlePluginConfigurationErrors
+> Task :expo-dev-launcher-gradle-plugin:pluginDescriptors UP-TO-DATE
+> Task :expo-dev-launcher-gradle-plugin:processResources UP-TO-DATE
+> Task :gradle-plugin:react-native-gradle-plugin:compileKotlin UP-TO-DATE
+> Task :gradle-plugin:react-native-gradle-plugin:compileJava NO-SOURCE
+> Task :gradle-plugin:react-native-gradle-plugin:pluginDescriptors UP-TO-DATE
+> Task :gradle-plugin:react-native-gradle-plugin:processResources UP-TO-DATE
+> Task :gradle-plugin:react-native-gradle-plugin:classes UP-TO-DATE
+> Task :gradle-plugin:react-native-gradle-plugin:jar UP-TO-DATE
+> Task :expo-dev-launcher-gradle-plugin:compileKotlin UP-TO-DATE
+> Task :expo-dev-launcher-gradle-plugin:compileJava NO-SOURCE
+> Task :expo-dev-launcher-gradle-plugin:classes UP-TO-DATE
+> Task :expo-dev-launcher-gradle-plugin:jar UP-TO-DATE
+
+> Configure project :app
+DEBUG: Autolinking applying plugin expo-dev-launcher-gradle-plugin from module expo-dev-launcher
+ Γä╣∩╕Å  [33mApplying gradle plugin[0m '[32mexpo-dev-launcher-gradle-plugin[0m' (expo-dev-launcher@5.0.35)
+
+> Configure project :
+DEBUG: Autolinking applying plugin expo-dev-launcher-gradle-plugin from module expo-dev-launcher
+
+> Configure project :expo
+
+Using expo modules
+  - [32mexpo-asset[0m (11.0.5)
+  - [32mexpo-constants[0m (17.0.8)
+  - [32mexpo-crypto[0m (14.0.2)
+  - [32mexpo-dev-client[0m (5.0.20)
+  - [32mexpo-dev-launcher[0m (5.0.35)
+  - [32mexpo-dev-menu[0m (6.0.25)
+  - [32mexpo-font[0m (13.0.4)
+  - [32mexpo-json-utils[0m (0.14.0)
+  - [32mexpo-linking[0m (7.0.5)
+  - [32mexpo-manifests[0m (0.15.8)
+  - [32mexpo-modules-core[0m (2.2.3)
+  - [32mexpo-splash-screen[0m (0.29.24)
+  - [32mexpo-web-browser[0m (14.0.2)
+
+
+> Configure project :react-native-reanimated
+Android gradle plugin: 8.6.0
+Gradle: 8.10.2
+
+> Task :app:generateAutolinkingNewArchitectureFiles
+> Task :app:generateAutolinkingPackageList
+> Task :app:generateCodegenSchemaFromJavaScript SKIPPED
+> Task :app:generateCodegenArtifactsFromSchema SKIPPED
+> Task :app:preBuild
+> Task :app:preDebugBuild
+> Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :app:checkKotlinGradlePluginConfigurationErrors
+> Task :app:generateDebugBuildConfig FROM-CACHE
+> Task :expo:generateExpoModulesPackageListTask
+> Task :expo:preBuild
+> Task :expo:preDebugBuild
+> Task :expo-asset:preBuild UP-TO-DATE
+> Task :expo-asset:preDebugBuild UP-TO-DATE
+> Task :expo:writeDebugAarMetadata
+> Task :expo-asset:writeDebugAarMetadata
+> Task :expo-constants:createExpoConfig
+> Task :expo-constants:preBuild
+> Task :expo-constants:preDebugBuild
+> Task :expo-crypto:preBuild UP-TO-DATE
+> Task :expo-crypto:preDebugBuild UP-TO-DATE
+> Task :expo-constants:writeDebugAarMetadata
+> Task :expo-dev-client:preBuild UP-TO-DATE
+> Task :expo-crypto:writeDebugAarMetadata
+> Task :expo-dev-client:preDebugBuild UP-TO-DATE
+> Task :expo-dev-launcher:preBuild UP-TO-DATE
+> Task :expo-dev-launcher:preDebugBuild UP-TO-DATE
+> Task :expo-dev-client:writeDebugAarMetadata
+> Task :expo-dev-menu:preBuild UP-TO-DATE
+> Task :expo-dev-menu:preDebugBuild UP-TO-DATE
+> Task :expo-dev-launcher:writeDebugAarMetadata
+> Task :expo-dev-menu:writeDebugAarMetadata
+> Task :expo-dev-menu-interface:preBuild UP-TO-DATE
+> Task :expo-dev-menu-interface:preDebugBuild UP-TO-DATE
+> Task :expo-font:preBuild UP-TO-DATE
+> Task :expo-font:preDebugBuild UP-TO-DATE
+> Task :expo-dev-menu-interface:writeDebugAarMetadata
+> Task :expo-json-utils:preBuild UP-TO-DATE
+> Task :expo-json-utils:preDebugBuild UP-TO-DATE
+> Task :expo-font:writeDebugAarMetadata
+> Task :expo-linking:preBuild UP-TO-DATE
+> Task :expo-linking:preDebugBuild UP-TO-DATE
+> Task :expo-json-utils:writeDebugAarMetadata
+> Task :expo-manifests:preBuild UP-TO-DATE
+> Task :expo-manifests:preDebugBuild UP-TO-DATE
+> Task :expo-linking:writeDebugAarMetadata
+> Task :expo-modules-core:preBuild UP-TO-DATE
+> Task :expo-modules-core:preDebugBuild UP-TO-DATE
+> Task :expo-manifests:writeDebugAarMetadata
+> Task :expo-splash-screen:preBuild UP-TO-DATE
+> Task :expo-splash-screen:preDebugBuild UP-TO-DATE
+> Task :expo-modules-core:writeDebugAarMetadata
+> Task :expo-updates-interface:preBuild UP-TO-DATE
+> Task :expo-updates-interface:preDebugBuild UP-TO-DATE
+> Task :expo-splash-screen:writeDebugAarMetadata
+> Task :expo-web-browser:preBuild UP-TO-DATE
+> Task :expo-web-browser:preDebugBuild UP-TO-DATE
+> Task :expo-updates-interface:writeDebugAarMetadata
+> Task :expo-web-browser:writeDebugAarMetadata
+> Task :react-native-async-storage_async-storage:generateCodegenSchemaFromJavaScript
+> Task :react-native-async-storage_async-storage:generateCodegenArtifactsFromSchema
+> Task :react-native-async-storage_async-storage:preBuild
+> Task :react-native-async-storage_async-storage:preDebugBuild
+> Task :react-native-async-storage_async-storage:writeDebugAarMetadata
+> Task :react-native-date-picker:generateCodegenSchemaFromJavaScript
+> Task :react-native-date-picker:generateCodegenArtifactsFromSchema
+> Task :react-native-date-picker:preBuild
+> Task :react-native-date-picker:preDebugBuild
+> Task :react-native-date-picker:writeDebugAarMetadata
+> Task :react-native-gesture-handler:generateCodegenSchemaFromJavaScript
+> Task :react-native-gesture-handler:generateCodegenArtifactsFromSchema
+> Task :react-native-gesture-handler:preBuild
+> Task :react-native-gesture-handler:preDebugBuild
+> Task :react-native-gesture-handler:writeDebugAarMetadata
+> Task :react-native-google-signin_google-signin:generateCodegenSchemaFromJavaScript
+> Task :react-native-google-signin_google-signin:generateCodegenArtifactsFromSchema
+> Task :react-native-google-signin_google-signin:preBuild
+> Task :react-native-google-signin_google-signin:preDebugBuild
+> Task :react-native-reanimated:assertLatestReactNativeWithNewArchitectureTask SKIPPED
+> Task :react-native-reanimated:assertMinimalReactNativeVersionTask SKIPPED
+> Task :react-native-google-signin_google-signin:writeDebugAarMetadata
+> Task :react-native-reanimated:generateCodegenSchemaFromJavaScript
+> Task :react-native-reanimated:generateCodegenArtifactsFromSchema
+> Task :react-native-reanimated:prepareReanimatedHeadersForPrefabs
+> Task :react-native-reanimated:prepareWorkletsHeadersForPrefabs
+> Task :react-native-reanimated:preBuild
+> Task :react-native-reanimated:preDebugBuild
+> Task :react-native-reanimated:writeDebugAarMetadata
+> Task :react-native-safe-area-context:generateCodegenSchemaFromJavaScript
+> Task :react-native-safe-area-context:generateCodegenArtifactsFromSchema
+> Task :react-native-safe-area-context:preBuild
+> Task :react-native-safe-area-context:preDebugBuild
+> Task :react-native-safe-area-context:writeDebugAarMetadata
+> Task :react-native-screens:generateCodegenSchemaFromJavaScript
+> Task :react-native-screens:generateCodegenArtifactsFromSchema
+> Task :react-native-screens:preBuild
+> Task :react-native-screens:preDebugBuild
+> Task :react-native-screens:writeDebugAarMetadata
+> Task :react-native-vector-icons:generateCodegenSchemaFromJavaScript
+> Task :react-native-vector-icons:generateCodegenArtifactsFromSchema
+> Task :react-native-vector-icons:preBuild
+> Task :react-native-vector-icons:preDebugBuild
+> Task :react-native-vector-icons:writeDebugAarMetadata
+> Task :react-native-webview:generateCodegenSchemaFromJavaScript
+> Task :react-native-webview:generateCodegenArtifactsFromSchema
+> Task :react-native-webview:preBuild
+> Task :react-native-webview:preDebugBuild
+> Task :react-native-webview:writeDebugAarMetadata
+> Task :app:generateDebugResValues FROM-CACHE
+> Task :expo:generateDebugResValues FROM-CACHE
+> Task :expo:generateDebugResources FROM-CACHE
+> Task :expo:packageDebugResources FROM-CACHE
+> Task :expo-asset:generateDebugResValues FROM-CACHE
+> Task :app:checkDebugAarMetadata
+> Task :expo-asset:generateDebugResources FROM-CACHE
+> Task :expo-asset:packageDebugResources FROM-CACHE
+> Task :expo-constants:generateDebugResValues FROM-CACHE
+> Task :expo-constants:generateDebugResources FROM-CACHE
+> Task :expo-constants:packageDebugResources FROM-CACHE
+> Task :expo-crypto:generateDebugResValues FROM-CACHE
+> Task :expo-crypto:generateDebugResources FROM-CACHE
+> Task :expo-crypto:packageDebugResources
+> Task :expo-dev-client:generateDebugResValues FROM-CACHE
+> Task :expo-dev-client:generateDebugResources FROM-CACHE
+> Task :expo-dev-client:packageDebugResources FROM-CACHE
+> Task :expo-dev-launcher:generateDebugResValues FROM-CACHE
+> Task :expo-dev-launcher:generateDebugResources FROM-CACHE
+> Task :expo-dev-launcher:packageDebugResources FROM-CACHE
+> Task :expo-dev-menu:generateDebugResValues FROM-CACHE
+> Task :expo-dev-menu:generateDebugResources FROM-CACHE
+> Task :expo-dev-menu:packageDebugResources FROM-CACHE
+> Task :expo-dev-menu-interface:generateDebugResValues FROM-CACHE
+> Task :expo-dev-menu-interface:generateDebugResources FROM-CACHE
+> Task :expo-dev-menu-interface:packageDebugResources FROM-CACHE
+> Task :expo-font:generateDebugResValues FROM-CACHE
+> Task :expo-font:generateDebugResources FROM-CACHE
+> Task :expo-font:packageDebugResources FROM-CACHE
+> Task :expo-json-utils:generateDebugResValues FROM-CACHE
+> Task :expo-json-utils:generateDebugResources FROM-CACHE
+> Task :expo-json-utils:packageDebugResources FROM-CACHE
+> Task :expo-linking:generateDebugResValues FROM-CACHE
+> Task :expo-linking:generateDebugResources FROM-CACHE
+> Task :expo-linking:packageDebugResources
+> Task :expo-manifests:generateDebugResValues FROM-CACHE
+> Task :expo-manifests:generateDebugResources FROM-CACHE
+> Task :expo-manifests:packageDebugResources FROM-CACHE
+> Task :expo-modules-core:generateDebugResValues FROM-CACHE
+> Task :expo-modules-core:generateDebugResources FROM-CACHE
+> Task :expo-modules-core:packageDebugResources FROM-CACHE
+> Task :expo-splash-screen:generateDebugResValues FROM-CACHE
+> Task :expo-splash-screen:generateDebugResources
+> Task :expo-splash-screen:packageDebugResources
+> Task :expo-updates-interface:generateDebugResValues FROM-CACHE
+> Task :expo-updates-interface:generateDebugResources FROM-CACHE
+> Task :expo-updates-interface:packageDebugResources FROM-CACHE
+> Task :expo-web-browser:generateDebugResValues FROM-CACHE
+> Task :expo-web-browser:generateDebugResources FROM-CACHE
+> Task :expo-web-browser:packageDebugResources
+> Task :react-native-async-storage_async-storage:generateDebugResValues FROM-CACHE
+> Task :react-native-async-storage_async-storage:generateDebugResources FROM-CACHE
+> Task :react-native-async-storage_async-storage:packageDebugResources FROM-CACHE
+> Task :react-native-date-picker:generateDebugResValues FROM-CACHE
+> Task :react-native-date-picker:generateDebugResources FROM-CACHE
+> Task :react-native-date-picker:packageDebugResources FROM-CACHE
+> Task :react-native-gesture-handler:generateDebugResValues FROM-CACHE
+> Task :react-native-gesture-handler:generateDebugResources FROM-CACHE
+> Task :react-native-gesture-handler:packageDebugResources FROM-CACHE
+> Task :react-native-google-signin_google-signin:generateDebugResValues FROM-CACHE
+> Task :react-native-google-signin_google-signin:generateDebugResources FROM-CACHE
+> Task :react-native-google-signin_google-signin:packageDebugResources FROM-CACHE
+> Task :react-native-reanimated:generateDebugResValues FROM-CACHE
+> Task :react-native-reanimated:generateDebugResources FROM-CACHE
+> Task :react-native-reanimated:packageDebugResources FROM-CACHE
+> Task :react-native-safe-area-context:generateDebugResValues FROM-CACHE
+> Task :react-native-safe-area-context:generateDebugResources FROM-CACHE
+> Task :react-native-safe-area-context:packageDebugResources FROM-CACHE
+> Task :react-native-screens:generateDebugResValues FROM-CACHE
+> Task :react-native-screens:generateDebugResources FROM-CACHE
+> Task :react-native-screens:packageDebugResources FROM-CACHE
+> Task :react-native-vector-icons:generateDebugResValues FROM-CACHE
+> Task :react-native-vector-icons:generateDebugResources FROM-CACHE
+> Task :react-native-vector-icons:packageDebugResources FROM-CACHE
+> Task :react-native-webview:generateDebugResValues FROM-CACHE
+> Task :react-native-webview:generateDebugResources FROM-CACHE
+> Task :react-native-webview:packageDebugResources FROM-CACHE
+> Task :app:mapDebugSourceSetPaths
+> Task :app:generateDebugResources
+> Task :app:packageDebugResources
+> Task :app:createDebugCompatibleScreenManifests
+> Task :app:extractDeepLinksDebug FROM-CACHE
+> Task :expo:extractDeepLinksDebug FROM-CACHE
+> Task :expo-asset:extractDeepLinksDebug FROM-CACHE
+> Task :expo-constants:extractDeepLinksDebug FROM-CACHE
+> Task :expo-crypto:extractDeepLinksDebug FROM-CACHE
+> Task :expo-dev-client:extractDeepLinksDebug FROM-CACHE
+> Task :expo-dev-launcher:extractDeepLinksDebug FROM-CACHE
+> Task :expo-dev-menu:extractDeepLinksDebug FROM-CACHE
+> Task :expo-dev-menu-interface:extractDeepLinksDebug FROM-CACHE
+> Task :expo-font:extractDeepLinksDebug FROM-CACHE
+> Task :app:parseDebugLocalResources
+> Task :expo-json-utils:extractDeepLinksDebug FROM-CACHE
+> Task :expo-asset:processDebugManifest
+> Task :expo-crypto:processDebugManifest
+> Task :expo:processDebugManifest
+> Task :expo-dev-menu:processDebugManifest
+> Task :expo-dev-launcher:processDebugManifest
+> Task :expo-dev-menu-interface:processDebugManifest
+> Task :expo-dev-client:processDebugManifest
+> Task :expo-constants:processDebugManifest
+> Task :expo-font:processDebugManifest
+> Task :expo-linking:extractDeepLinksDebug FROM-CACHE
+> Task :expo-json-utils:processDebugManifest
+> Task :expo-manifests:extractDeepLinksDebug FROM-CACHE
+> Task :expo-linking:processDebugManifest
+> Task :expo-modules-core:extractDeepLinksDebug FROM-CACHE
+> Task :expo-manifests:processDebugManifest
+> Task :expo-splash-screen:extractDeepLinksDebug FROM-CACHE
+
+> Task :expo-modules-core:processDebugManifest
+E:\Rmz1Project\StudyManager\node_modules\expo-modules-core\android\src\main\AndroidManifest.xml:8:9-11:45 Warning:
+	meta-data#com.facebook.soloader.enabled@android:value was tagged at AndroidManifest.xml:8 to replace other declarations but no other declaration present
+
+> Task :expo-updates-interface:extractDeepLinksDebug FROM-CACHE
+> Task :expo-splash-screen:processDebugManifest
+> Task :expo-web-browser:extractDeepLinksDebug FROM-CACHE
+> Task :expo-updates-interface:processDebugManifest
+> Task :react-native-async-storage_async-storage:extractDeepLinksDebug FROM-CACHE
+> Task :expo-web-browser:processDebugManifest
+> Task :react-native-date-picker:extractDeepLinksDebug FROM-CACHE
+
+> Task :react-native-async-storage_async-storage:processDebugManifest
+package="com.reactnativecommunity.asyncstorage" found in source AndroidManifest.xml: E:\Rmz1Project\StudyManager\node_modules\@react-native-async-storage\async-storage\android\src\main\AndroidManifest.xml.
+Setting the namespace via the package attribute in the source AndroidManifest.xml is no longer supported, and the value is ignored.
+Recommendation: remove package="com.reactnativecommunity.asyncstorage" from the source AndroidManifest.xml: E:\Rmz1Project\StudyManager\node_modules\@react-native-async-storage\async-storage\android\src\main\AndroidManifest.xml.
+
+> Task :react-native-gesture-handler:extractDeepLinksDebug FROM-CACHE
+
+> Task :react-native-date-picker:processDebugManifest
+package="com.henninghall.date_picker" found in source AndroidManifest.xml: E:\Rmz1Project\StudyManager\node_modules\react-native-date-picker\android\src\main\AndroidManifest.xml.
+Setting the namespace via the package attribute in the source AndroidManifest.xml is no longer supported, and the value is ignored.
+Recommendation: remove package="com.henninghall.date_picker" from the source AndroidManifest.xml: E:\Rmz1Project\StudyManager\node_modules\react-native-date-picker\android\src\main\AndroidManifest.xml.
+
+> Task :react-native-google-signin_google-signin:extractDeepLinksDebug FROM-CACHE
+> Task :react-native-gesture-handler:processDebugManifest
+> Task :react-native-reanimated:extractDeepLinksDebug FROM-CACHE
+
+> Task :react-native-google-signin_google-signin:processDebugManifest
+package="com.reactnativegooglesignin" found in source AndroidManifest.xml: E:\Rmz1Project\StudyManager\node_modules\@react-native-google-signin\google-signin\android\src\main\AndroidManifest.xml.
+Setting the namespace via the package attribute in the source AndroidManifest.xml is no longer supported, and the value is ignored.
+Recommendation: remove package="com.reactnativegooglesignin" from the source AndroidManifest.xml: E:\Rmz1Project\StudyManager\node_modules\@react-native-google-signin\google-signin\android\src\main\AndroidManifest.xml.
+
+> Task :react-native-safe-area-context:extractDeepLinksDebug FROM-CACHE
+> Task :react-native-reanimated:processDebugManifest
+> Task :react-native-screens:extractDeepLinksDebug FROM-CACHE
+
+> Task :react-native-safe-area-context:processDebugManifest
+package="com.th3rdwave.safeareacontext" found in source AndroidManifest.xml: E:\Rmz1Project\StudyManager\node_modules\react-native-safe-area-context\android\src\main\AndroidManifest.xml.
+Setting the namespace via the package attribute in the source AndroidManifest.xml is no longer supported, and the value is ignored.
+Recommendation: remove package="com.th3rdwave.safeareacontext" from the source AndroidManifest.xml: E:\Rmz1Project\StudyManager\node_modules\react-native-safe-area-context\android\src\main\AndroidManifest.xml.
+
+> Task :react-native-vector-icons:extractDeepLinksDebug FROM-CACHE
+
+> Task :react-native-screens:processDebugManifest
+package="com.swmansion.rnscreens" found in source AndroidManifest.xml: E:\Rmz1Project\StudyManager\node_modules\react-native-screens\android\src\main\AndroidManifest.xml.
+Setting the namespace via the package attribute in the source AndroidManifest.xml is no longer supported, and the value is ignored.
+Recommendation: remove package="com.swmansion.rnscreens" from the source AndroidManifest.xml: E:\Rmz1Project\StudyManager\node_modules\react-native-screens\android\src\main\AndroidManifest.xml.
+
+> Task :react-native-webview:extractDeepLinksDebug FROM-CACHE
+
+> Task :react-native-vector-icons:processDebugManifest
+package="com.oblador.vectoricons" found in source AndroidManifest.xml: E:\Rmz1Project\StudyManager\node_modules\react-native-vector-icons\android\src\main\AndroidManifest.xml.
+Setting the namespace via the package attribute in the source AndroidManifest.xml is no longer supported, and the value is ignored.
+Recommendation: remove package="com.oblador.vectoricons" from the source AndroidManifest.xml: E:\Rmz1Project\StudyManager\node_modules\react-native-vector-icons\android\src\main\AndroidManifest.xml.
+
+> Task :expo:compileDebugLibraryResources FROM-CACHE
+> Task :expo:parseDebugLocalResources FROM-CACHE
+> Task :react-native-webview:processDebugManifest
+> Task :expo:generateDebugRFile FROM-CACHE
+> Task :app:mergeDebugResources
+
+> Task :app:processDebugMainManifest
+E:\Rmz1Project\StudyManager\android\app\src\debug\AndroidManifest.xml:6:5-162 Warning:
+	application@android:usesCleartextTraffic was tagged at AndroidManifest.xml:6 to replace other declarations but no other declaration present
+
+> Task :app:processDebugManifest
+> Task :expo-asset:compileDebugLibraryResources FROM-CACHE
+> Task :expo-asset:parseDebugLocalResources FROM-CACHE
+> Task :expo-asset:generateDebugRFile FROM-CACHE
+> Task :expo-constants:compileDebugLibraryResources FROM-CACHE
+> Task :expo-constants:parseDebugLocalResources FROM-CACHE
+> Task :expo-constants:generateDebugRFile FROM-CACHE
+> Task :expo-crypto:compileDebugLibraryResources FROM-CACHE
+> Task :expo-crypto:parseDebugLocalResources FROM-CACHE
+> Task :expo-dev-client:compileDebugLibraryResources FROM-CACHE
+> Task :expo-dev-client:parseDebugLocalResources FROM-CACHE
+> Task :expo-dev-client:generateDebugRFile FROM-CACHE
+> Task :expo-dev-launcher:compileDebugLibraryResources FROM-CACHE
+> Task :expo-crypto:generateDebugRFile
+> Task :expo-dev-launcher:parseDebugLocalResources FROM-CACHE
+> Task :expo-dev-launcher:generateDebugRFile FROM-CACHE
+> Task :expo-dev-menu:compileDebugLibraryResources FROM-CACHE
+> Task :expo-dev-menu:parseDebugLocalResources FROM-CACHE
+> Task :expo-dev-menu:generateDebugRFile FROM-CACHE
+> Task :expo-dev-menu-interface:compileDebugLibraryResources FROM-CACHE
+> Task :expo-dev-menu-interface:parseDebugLocalResources FROM-CACHE
+> Task :expo-dev-menu-interface:generateDebugRFile FROM-CACHE
+> Task :expo-font:compileDebugLibraryResources FROM-CACHE
+> Task :expo-font:parseDebugLocalResources FROM-CACHE
+> Task :expo-font:generateDebugRFile FROM-CACHE
+> Task :expo-json-utils:compileDebugLibraryResources FROM-CACHE
+> Task :expo-json-utils:parseDebugLocalResources FROM-CACHE
+> Task :expo-json-utils:generateDebugRFile FROM-CACHE
+> Task :expo-linking:compileDebugLibraryResources FROM-CACHE
+> Task :expo-linking:parseDebugLocalResources FROM-CACHE
+> Task :expo-manifests:compileDebugLibraryResources FROM-CACHE
+> Task :expo-manifests:parseDebugLocalResources FROM-CACHE
+> Task :expo-manifests:generateDebugRFile FROM-CACHE
+> Task :expo-linking:generateDebugRFile
+> Task :expo-modules-core:compileDebugLibraryResources FROM-CACHE
+> Task :expo-modules-core:parseDebugLocalResources FROM-CACHE
+> Task :expo-modules-core:generateDebugRFile FROM-CACHE
+> Task :expo-updates-interface:compileDebugLibraryResources FROM-CACHE
+> Task :expo-splash-screen:compileDebugLibraryResources
+> Task :expo-updates-interface:parseDebugLocalResources FROM-CACHE
+> Task :expo-splash-screen:parseDebugLocalResources
+> Task :expo-updates-interface:generateDebugRFile FROM-CACHE
+> Task :expo-web-browser:compileDebugLibraryResources FROM-CACHE
+> Task :expo-web-browser:parseDebugLocalResources FROM-CACHE
+> Task :expo-splash-screen:generateDebugRFile
+> Task :react-native-async-storage_async-storage:compileDebugLibraryResources FROM-CACHE
+> Task :react-native-async-storage_async-storage:parseDebugLocalResources FROM-CACHE
+> Task :expo-web-browser:generateDebugRFile
+> Task :react-native-async-storage_async-storage:generateDebugRFile FROM-CACHE
+> Task :react-native-date-picker:compileDebugLibraryResources FROM-CACHE
+> Task :react-native-date-picker:parseDebugLocalResources FROM-CACHE
+> Task :react-native-date-picker:generateDebugRFile FROM-CACHE
+> Task :react-native-gesture-handler:compileDebugLibraryResources FROM-CACHE
+> Task :react-native-gesture-handler:parseDebugLocalResources FROM-CACHE
+> Task :react-native-gesture-handler:generateDebugRFile FROM-CACHE
+> Task :react-native-google-signin_google-signin:compileDebugLibraryResources FROM-CACHE
+> Task :react-native-google-signin_google-signin:parseDebugLocalResources FROM-CACHE
+> Task :react-native-google-signin_google-signin:generateDebugRFile FROM-CACHE
+> Task :react-native-reanimated:compileDebugLibraryResources FROM-CACHE
+> Task :react-native-reanimated:parseDebugLocalResources FROM-CACHE
+> Task :react-native-reanimated:generateDebugRFile FROM-CACHE
+> Task :react-native-safe-area-context:compileDebugLibraryResources FROM-CACHE
+> Task :react-native-safe-area-context:parseDebugLocalResources FROM-CACHE
+> Task :react-native-safe-area-context:generateDebugRFile FROM-CACHE
+> Task :react-native-screens:compileDebugLibraryResources FROM-CACHE
+> Task :react-native-screens:parseDebugLocalResources FROM-CACHE
+> Task :react-native-screens:generateDebugRFile FROM-CACHE
+> Task :react-native-vector-icons:compileDebugLibraryResources FROM-CACHE
+> Task :react-native-vector-icons:parseDebugLocalResources FROM-CACHE
+> Task :react-native-vector-icons:generateDebugRFile FROM-CACHE
+> Task :react-native-webview:compileDebugLibraryResources FROM-CACHE
+> Task :react-native-webview:parseDebugLocalResources FROM-CACHE
+> Task :react-native-webview:generateDebugRFile FROM-CACHE
+> Task :expo:checkKotlinGradlePluginConfigurationErrors
+> Task :expo:generateDebugBuildConfig FROM-CACHE
+> Task :expo-asset:checkKotlinGradlePluginConfigurationErrors
+> Task :expo-asset:generateDebugBuildConfig FROM-CACHE
+> Task :expo-modules-core:checkKotlinGradlePluginConfigurationErrors
+> Task :expo-modules-core:generateDebugBuildConfig FROM-CACHE
+> Task :expo-modules-core:compileDebugKotlin FROM-CACHE
+> Task :expo-modules-core:javaPreCompileDebug FROM-CACHE
+> Task :expo-modules-core:compileDebugJavaWithJavac FROM-CACHE
+> Task :expo-asset:javaPreCompileDebug FROM-CACHE
+> Task :expo-constants:checkKotlinGradlePluginConfigurationErrors
+> Task :expo-constants:generateDebugBuildConfig FROM-CACHE
+> Task :expo-constants:javaPreCompileDebug FROM-CACHE
+> Task :expo-crypto:checkKotlinGradlePluginConfigurationErrors
+> Task :expo-crypto:generateDebugBuildConfig
+> Task :expo-crypto:javaPreCompileDebug FROM-CACHE
+> Task :expo-dev-client:checkKotlinGradlePluginConfigurationErrors
+> Task :expo-modules-core:bundleLibCompileToJarDebug
+> Task :expo-dev-client:dataBindingMergeDependencyArtifactsDebug
+> Task :expo-asset:compileDebugKotlin FROM-CACHE
+> Task :expo-asset:compileDebugJavaWithJavac FROM-CACHE
+> Task :expo-asset:bundleLibCompileToJarDebug
+> Task :expo-constants:compileDebugKotlin FROM-CACHE
+> Task :expo-constants:compileDebugJavaWithJavac FROM-CACHE
+> Task :expo-constants:bundleLibCompileToJarDebug
+> Task :expo-dev-client:dataBindingGenBaseClassesDebug FROM-CACHE
+> Task :expo-dev-client:generateDebugBuildConfig FROM-CACHE
+> Task :expo-dev-client:compileDebugKotlin NO-SOURCE
+> Task :expo-dev-client:javaPreCompileDebug FROM-CACHE
+> Task :expo-dev-client:compileDebugJavaWithJavac FROM-CACHE
+> Task :expo-dev-launcher:checkKotlinGradlePluginConfigurationErrors
+> Task :expo-dev-client:bundleLibCompileToJarDebug
+> Task :expo-dev-launcher:dataBindingMergeDependencyArtifactsDebug
+> Task :expo-dev-launcher:generateDebugBuildConfig FROM-CACHE
+> Task :expo-dev-launcher:dataBindingGenBaseClassesDebug FROM-CACHE
+> Task :expo-dev-menu:checkKotlinGradlePluginConfigurationErrors
+> Task :expo-dev-menu:generateDebugBuildConfig FROM-CACHE
+> Task :expo-dev-menu-interface:checkKotlinGradlePluginConfigurationErrors
+> Task :expo-dev-menu-interface:generateDebugBuildConfig FROM-CACHE
+> Task :expo-dev-menu-interface:compileDebugKotlin FROM-CACHE
+> Task :expo-dev-menu-interface:javaPreCompileDebug FROM-CACHE
+> Task :expo-dev-menu-interface:compileDebugJavaWithJavac FROM-CACHE
+> Task :expo-json-utils:checkKotlinGradlePluginConfigurationErrors
+> Task :expo-dev-menu-interface:bundleLibCompileToJarDebug
+> Task :expo-json-utils:generateDebugBuildConfig FROM-CACHE
+> Task :expo-json-utils:compileDebugKotlin FROM-CACHE
+> Task :expo-json-utils:javaPreCompileDebug FROM-CACHE
+> Task :expo-json-utils:compileDebugJavaWithJavac FROM-CACHE
+> Task :expo-manifests:checkKotlinGradlePluginConfigurationErrors
+> Task :expo-json-utils:bundleLibCompileToJarDebug
+> Task :expo-manifests:generateDebugBuildConfig FROM-CACHE
+> Task :expo-manifests:compileDebugKotlin FROM-CACHE
+> Task :expo-manifests:javaPreCompileDebug FROM-CACHE
+> Task :expo-manifests:compileDebugJavaWithJavac FROM-CACHE
+> Task :expo-dev-menu:javaPreCompileDebug FROM-CACHE
+> Task :expo-updates-interface:checkKotlinGradlePluginConfigurationErrors
+> Task :expo-manifests:bundleLibCompileToJarDebug
+> Task :expo-updates-interface:generateDebugBuildConfig FROM-CACHE
+> Task :expo-dev-menu:compileDebugKotlin FROM-CACHE
+> Task :expo-dev-menu:compileDebugJavaWithJavac FROM-CACHE
+> Task :expo-dev-menu:bundleLibCompileToJarDebug
+> Task :expo-updates-interface:compileDebugKotlin FROM-CACHE
+> Task :expo-updates-interface:javaPreCompileDebug FROM-CACHE
+> Task :expo-updates-interface:compileDebugJavaWithJavac FROM-CACHE
+> Task :expo-dev-launcher:javaPreCompileDebug FROM-CACHE
+> Task :expo-font:checkKotlinGradlePluginConfigurationErrors
+> Task :expo-updates-interface:bundleLibCompileToJarDebug
+> Task :expo-font:generateDebugBuildConfig FROM-CACHE
+> Task :expo-dev-launcher:compileDebugKotlin FROM-CACHE
+> Task :expo-dev-launcher:compileDebugJavaWithJavac FROM-CACHE
+> Task :app:processDebugManifestForPackage
+> Task :expo-dev-launcher:bundleLibCompileToJarDebug
+> Task :expo-font:compileDebugKotlin FROM-CACHE
+> Task :expo-font:javaPreCompileDebug FROM-CACHE
+> Task :expo-font:compileDebugJavaWithJavac FROM-CACHE
+> Task :expo-linking:checkKotlinGradlePluginConfigurationErrors
+> Task :expo-font:bundleLibCompileToJarDebug
+> Task :expo-linking:generateDebugBuildConfig
+> Task :expo-linking:javaPreCompileDebug FROM-CACHE
+> Task :expo-splash-screen:checkKotlinGradlePluginConfigurationErrors
+> Task :expo-splash-screen:generateDebugBuildConfig
+> Task :expo-splash-screen:javaPreCompileDebug FROM-CACHE
+> Task :expo-web-browser:checkKotlinGradlePluginConfigurationErrors
+> Task :expo-web-browser:generateDebugBuildConfig
+> Task :expo-web-browser:javaPreCompileDebug FROM-CACHE
+> Task :expo:javaPreCompileDebug FROM-CACHE
+> Task :react-native-async-storage_async-storage:generateDebugBuildConfig FROM-CACHE
+> Task :react-native-async-storage_async-storage:javaPreCompileDebug FROM-CACHE
+> Task :react-native-async-storage_async-storage:compileDebugJavaWithJavac FROM-CACHE
+> Task :react-native-date-picker:generateDebugBuildConfig FROM-CACHE
+> Task :react-native-async-storage_async-storage:bundleLibCompileToJarDebug
+> Task :react-native-date-picker:javaPreCompileDebug FROM-CACHE
+> Task :react-native-date-picker:compileDebugJavaWithJavac FROM-CACHE
+> Task :react-native-gesture-handler:checkKotlinGradlePluginConfigurationErrors
+> Task :react-native-gesture-handler:generateDebugBuildConfig FROM-CACHE
+> Task :react-native-reanimated:generateDebugBuildConfig FROM-CACHE
+> Task :react-native-reanimated:javaPreCompileDebug FROM-CACHE
+> Task :react-native-date-picker:bundleLibCompileToJarDebug
+> Task :react-native-reanimated:packageNdkLibs NO-SOURCE
+> Task :react-native-reanimated:compileDebugJavaWithJavac FROM-CACHE
+> Task :react-native-gesture-handler:javaPreCompileDebug FROM-CACHE
+> Task :react-native-google-signin_google-signin:checkKotlinGradlePluginConfigurationErrors
+> Task :react-native-google-signin_google-signin:generateDebugBuildConfig FROM-CACHE
+> Task :react-native-reanimated:bundleLibCompileToJarDebug
+> Task :react-native-google-signin_google-signin:compileDebugKotlin FROM-CACHE
+> Task :react-native-gesture-handler:compileDebugKotlin FROM-CACHE
+> Task :react-native-gesture-handler:compileDebugJavaWithJavac FROM-CACHE
+> Task :react-native-google-signin_google-signin:javaPreCompileDebug FROM-CACHE
+> Task :react-native-gesture-handler:bundleLibCompileToJarDebug
+> Task :react-native-google-signin_google-signin:compileDebugJavaWithJavac FROM-CACHE
+> Task :react-native-safe-area-context:checkKotlinGradlePluginConfigurationErrors
+> Task :react-native-safe-area-context:generateDebugBuildConfig FROM-CACHE
+> Task :react-native-google-signin_google-signin:bundleLibCompileToJarDebug
+> Task :react-native-safe-area-context:compileDebugKotlin FROM-CACHE
+> Task :react-native-safe-area-context:javaPreCompileDebug FROM-CACHE
+> Task :react-native-safe-area-context:compileDebugJavaWithJavac FROM-CACHE
+> Task :react-native-screens:checkKotlinGradlePluginConfigurationErrors
+> Task :react-native-screens:generateDebugBuildConfig FROM-CACHE
+> Task :react-native-safe-area-context:bundleLibCompileToJarDebug
+> Task :react-native-screens:compileDebugKotlin FROM-CACHE
+> Task :react-native-screens:javaPreCompileDebug FROM-CACHE
+> Task :react-native-screens:compileDebugJavaWithJavac FROM-CACHE
+> Task :react-native-vector-icons:generateDebugBuildConfig FROM-CACHE
+> Task :react-native-vector-icons:javaPreCompileDebug FROM-CACHE
+> Task :react-native-screens:bundleLibCompileToJarDebug
+> Task :react-native-vector-icons:compileDebugJavaWithJavac FROM-CACHE
+> Task :react-native-webview:checkKotlinGradlePluginConfigurationErrors
+> Task :react-native-vector-icons:bundleLibCompileToJarDebug
+> Task :react-native-webview:generateDebugBuildConfig FROM-CACHE
+> Task :react-native-webview:compileDebugKotlin FROM-CACHE
+> Task :react-native-webview:javaPreCompileDebug FROM-CACHE
+> Task :react-native-webview:compileDebugJavaWithJavac FROM-CACHE
+> Task :app:javaPreCompileDebug FROM-CACHE
+> Task :react-native-webview:bundleLibCompileToJarDebug
+> Task :app:processDebugResources
+> Task :app:mergeDebugShaders
+> Task :app:compileDebugShaders NO-SOURCE
+> Task :app:generateDebugAssets UP-TO-DATE
+> Task :expo:mergeDebugShaders
+> Task :expo:compileDebugShaders NO-SOURCE
+> Task :expo:generateDebugAssets UP-TO-DATE
+> Task :expo:packageDebugAssets
+> Task :expo-asset:mergeDebugShaders
+> Task :expo-asset:compileDebugShaders NO-SOURCE
+> Task :expo-asset:generateDebugAssets UP-TO-DATE
+> Task :expo-asset:packageDebugAssets
+> Task :expo-constants:mergeDebugShaders
+> Task :expo-constants:compileDebugShaders NO-SOURCE
+> Task :expo-constants:generateDebugAssets UP-TO-DATE
+> Task :expo-constants:packageDebugAssets
+> Task :expo-crypto:mergeDebugShaders
+> Task :expo-crypto:compileDebugShaders NO-SOURCE
+> Task :expo-crypto:generateDebugAssets UP-TO-DATE
+> Task :expo-crypto:packageDebugAssets
+> Task :expo-dev-client:mergeDebugShaders
+> Task :expo-dev-client:compileDebugShaders NO-SOURCE
+> Task :expo-dev-client:generateDebugAssets UP-TO-DATE
+> Task :expo-dev-client:packageDebugAssets
+> Task :expo-dev-launcher:mergeDebugShaders
+> Task :expo-dev-launcher:compileDebugShaders NO-SOURCE
+> Task :expo-dev-launcher:generateDebugAssets UP-TO-DATE
+> Task :expo-dev-launcher:packageDebugAssets
+> Task :expo-dev-menu:mergeDebugShaders
+> Task :expo-dev-menu:compileDebugShaders NO-SOURCE
+> Task :expo-dev-menu:clenupAssets UP-TO-DATE
+> Task :expo-dev-menu:copyAssets
+> Task :expo-dev-menu:generateDebugAssets UP-TO-DATE
+> Task :expo-dev-menu:packageDebugAssets
+> Task :expo-dev-menu-interface:mergeDebugShaders
+> Task :expo-dev-menu-interface:compileDebugShaders NO-SOURCE
+> Task :expo-dev-menu-interface:generateDebugAssets UP-TO-DATE
+> Task :expo-dev-menu-interface:packageDebugAssets
+> Task :expo-font:mergeDebugShaders
+> Task :expo-font:compileDebugShaders NO-SOURCE
+> Task :expo-font:generateDebugAssets UP-TO-DATE
+> Task :expo-font:packageDebugAssets
+> Task :expo-json-utils:mergeDebugShaders
+> Task :expo-json-utils:compileDebugShaders NO-SOURCE
+> Task :expo-json-utils:generateDebugAssets UP-TO-DATE
+> Task :expo-json-utils:packageDebugAssets
+> Task :expo-linking:mergeDebugShaders
+> Task :expo-linking:compileDebugShaders NO-SOURCE
+> Task :expo-linking:generateDebugAssets UP-TO-DATE
+> Task :expo-linking:packageDebugAssets
+> Task :expo-manifests:mergeDebugShaders
+> Task :expo-manifests:compileDebugShaders NO-SOURCE
+> Task :expo-manifests:generateDebugAssets UP-TO-DATE
+> Task :expo-manifests:packageDebugAssets
+> Task :expo-modules-core:mergeDebugShaders
+> Task :expo-modules-core:compileDebugShaders NO-SOURCE
+> Task :expo-modules-core:generateDebugAssets UP-TO-DATE
+> Task :expo-modules-core:packageDebugAssets
+> Task :expo-splash-screen:mergeDebugShaders
+> Task :expo-splash-screen:compileDebugShaders NO-SOURCE
+> Task :expo-splash-screen:generateDebugAssets UP-TO-DATE
+> Task :expo-splash-screen:packageDebugAssets
+> Task :expo-updates-interface:mergeDebugShaders
+> Task :expo-updates-interface:compileDebugShaders NO-SOURCE
+> Task :expo-updates-interface:generateDebugAssets UP-TO-DATE
+> Task :expo-updates-interface:packageDebugAssets
+> Task :expo-web-browser:mergeDebugShaders
+> Task :expo-web-browser:compileDebugShaders NO-SOURCE
+> Task :expo-web-browser:generateDebugAssets UP-TO-DATE
+> Task :expo-web-browser:packageDebugAssets
+> Task :react-native-async-storage_async-storage:mergeDebugShaders
+> Task :react-native-async-storage_async-storage:compileDebugShaders NO-SOURCE
+> Task :react-native-async-storage_async-storage:generateDebugAssets UP-TO-DATE
+> Task :react-native-async-storage_async-storage:packageDebugAssets
+> Task :react-native-date-picker:mergeDebugShaders
+> Task :react-native-date-picker:compileDebugShaders NO-SOURCE
+> Task :react-native-date-picker:generateDebugAssets UP-TO-DATE
+> Task :react-native-date-picker:packageDebugAssets
+> Task :react-native-gesture-handler:mergeDebugShaders
+> Task :react-native-gesture-handler:compileDebugShaders NO-SOURCE
+> Task :react-native-gesture-handler:generateDebugAssets UP-TO-DATE
+> Task :react-native-gesture-handler:packageDebugAssets
+> Task :react-native-google-signin_google-signin:mergeDebugShaders
+> Task :react-native-google-signin_google-signin:compileDebugShaders NO-SOURCE
+> Task :react-native-google-signin_google-signin:generateDebugAssets UP-TO-DATE
+> Task :react-native-google-signin_google-signin:packageDebugAssets
+> Task :react-native-reanimated:mergeDebugShaders
+> Task :react-native-reanimated:compileDebugShaders NO-SOURCE
+> Task :react-native-reanimated:generateDebugAssets UP-TO-DATE
+> Task :react-native-reanimated:packageDebugAssets
+> Task :react-native-safe-area-context:mergeDebugShaders
+> Task :react-native-safe-area-context:compileDebugShaders NO-SOURCE
+> Task :react-native-safe-area-context:generateDebugAssets UP-TO-DATE
+> Task :react-native-safe-area-context:packageDebugAssets
+> Task :react-native-screens:mergeDebugShaders
+> Task :react-native-screens:compileDebugShaders NO-SOURCE
+> Task :react-native-screens:generateDebugAssets UP-TO-DATE
+> Task :react-native-screens:packageDebugAssets
+> Task :react-native-vector-icons:mergeDebugShaders
+> Task :react-native-vector-icons:compileDebugShaders NO-SOURCE
+> Task :react-native-vector-icons:generateDebugAssets UP-TO-DATE
+> Task :react-native-vector-icons:packageDebugAssets
+> Task :react-native-webview:mergeDebugShaders
+> Task :react-native-webview:compileDebugShaders NO-SOURCE
+> Task :react-native-webview:generateDebugAssets UP-TO-DATE
+> Task :react-native-webview:packageDebugAssets
+> Task :expo-crypto:compileDebugKotlin
+> Task :expo-linking:compileDebugKotlin
+> Task :expo-splash-screen:compileDebugKotlin
+> Task :app:mergeDebugAssets
+
+> Task :expo-web-browser:compileDebugKotlin
+w: file:///E:/Rmz1Project/StudyManager/node_modules/expo-web-browser/android/src/main/java/expo/modules/webbrowser/WebBrowserModule.kt:112:15 'setToolbarColor(Int): CustomTabsIntent.Builder' is deprecated. Deprecated in Java
+w: file:///E:/Rmz1Project/StudyManager/node_modules/expo-web-browser/android/src/main/java/expo/modules/webbrowser/WebBrowserModule.kt:117:15 'setSecondaryToolbarColor(Int): CustomTabsIntent.Builder' is deprecated. Deprecated in Java
+w: file:///E:/Rmz1Project/StudyManager/node_modules/expo-web-browser/android/src/main/java/expo/modules/webbrowser/WebBrowserModule.kt:123:15 'addDefaultShareMenuItem(): CustomTabsIntent.Builder' is deprecated. Deprecated in Java
+
+> Task :expo-crypto:compileDebugJavaWithJavac
+> Task :expo-crypto:bundleLibCompileToJarDebug
+> Task :expo-linking:compileDebugJavaWithJavac
+> Task :expo-linking:bundleLibCompileToJarDebug
+> Task :expo-splash-screen:compileDebugJavaWithJavac
+> Task :expo-splash-screen:bundleLibCompileToJarDebug
+> Task :expo-web-browser:compileDebugJavaWithJavac
+> Task :expo-web-browser:bundleLibCompileToJarDebug
+> Task :react-native-google-signin_google-signin:bundleLibRuntimeToJarDebug
+> Task :expo-asset:bundleLibRuntimeToJarDebug
+> Task :expo-constants:bundleLibRuntimeToJarDebug
+> Task :expo-dev-client:bundleLibRuntimeToJarDebug
+> Task :expo-crypto:bundleLibRuntimeToJarDebug
+> Task :expo-dev-menu-interface:bundleLibRuntimeToJarDebug
+> Task :expo-font:bundleLibRuntimeToJarDebug
+> Task :expo-json-utils:bundleLibRuntimeToJarDebug
+> Task :expo-linking:bundleLibRuntimeToJarDebug
+> Task :expo-manifests:bundleLibRuntimeToJarDebug
+> Task :expo-splash-screen:bundleLibRuntimeToJarDebug
+> Task :expo-updates-interface:bundleLibRuntimeToJarDebug
+> Task :expo-dev-menu:bundleLibRuntimeToJarDebug
+> Task :expo-web-browser:bundleLibRuntimeToJarDebug
+> Task :expo-dev-launcher:bundleLibRuntimeToJarDebug
+> Task :react-native-safe-area-context:bundleLibRuntimeToJarDebug
+> Task :react-native-reanimated:bundleLibRuntimeToJarDebug
+> Task :react-native-gesture-handler:bundleLibRuntimeToJarDebug
+> Task :react-native-async-storage_async-storage:bundleLibRuntimeToJarDebug
+> Task :react-native-webview:bundleLibRuntimeToJarDebug
+> Task :react-native-vector-icons:bundleLibRuntimeToJarDebug
+> Task :app:desugarDebugFileDependencies FROM-CACHE
+> Task :react-native-date-picker:bundleLibRuntimeToJarDebug
+> Task :expo-asset:processDebugJavaRes
+> Task :react-native-screens:bundleLibRuntimeToJarDebug
+> Task :expo-constants:processDebugJavaRes
+> Task :expo-crypto:processDebugJavaRes
+> Task :expo-dev-client:processDebugJavaRes NO-SOURCE
+> Task :expo-dev-launcher:processDebugJavaRes
+> Task :expo-dev-menu:processDebugJavaRes
+> Task :expo-dev-menu-interface:processDebugJavaRes
+> Task :expo-font:processDebugJavaRes
+> Task :expo-json-utils:processDebugJavaRes
+> Task :expo-linking:processDebugJavaRes
+> Task :expo-manifests:processDebugJavaRes
+> Task :expo-modules-core:processDebugJavaRes
+> Task :expo-splash-screen:processDebugJavaRes
+> Task :expo-updates-interface:processDebugJavaRes
+> Task :app:compressDebugAssets
+> Task :expo-web-browser:processDebugJavaRes
+> Task :react-native-async-storage_async-storage:processDebugJavaRes NO-SOURCE
+> Task :react-native-date-picker:processDebugJavaRes NO-SOURCE
+> Task :react-native-gesture-handler:processDebugJavaRes
+> Task :react-native-google-signin_google-signin:processDebugJavaRes
+> Task :react-native-reanimated:processDebugJavaRes NO-SOURCE
+> Task :react-native-safe-area-context:processDebugJavaRes
+> Task :react-native-screens:processDebugJavaRes
+> Task :expo-modules-core:bundleLibRuntimeToJarDebug
+> Task :react-native-vector-icons:processDebugJavaRes NO-SOURCE
+> Task :react-native-webview:processDebugJavaRes
+> Task :app:checkDebugDuplicateClasses
+
+> Task :expo:compileDebugKotlin
+w: file:///E:/Rmz1Project/StudyManager/node_modules/expo/android/src/main/java/expo/modules/ReactActivityDelegateWrapper.kt:163:34 'constructor ReactDelegate(Activity!, ReactNativeHost!, String?, Bundle?)' is deprecated. Deprecated in Java
+w: file:///E:/Rmz1Project/StudyManager/node_modules/expo/android/src/main/java/expo/modules/fetch/NativeResponse.kt:40:16 This declaration overrides deprecated member but not marked as deprecated itself. Please add @Deprecated annotation or suppress. See https://youtrack.jetbrains.com/issue/KT-47902 for details
+w: file:///E:/Rmz1Project/StudyManager/node_modules/expo/android/src/main/java/expo/modules/fetch/NativeResponse.kt:42:11 'deallocate(): Unit' is deprecated. Use sharedObjectDidRelease() instead.
+
+> Task :react-native-reanimated:configureCMakeDebug[arm64-v8a]
+> Task :expo:compileDebugJavaWithJavac
+> Task :expo:processDebugJavaRes
+> Task :expo:bundleLibCompileToJarDebug
+> Task :expo:bundleLibRuntimeToJarDebug
+> Task :app:compileDebugKotlin
+> Task :app:compileDebugJavaWithJavac
+> Task :app:processDebugJavaRes
+> Task :react-native-reanimated:generateJsonModelDebug
+> Task :react-native-reanimated:prefabDebugConfigurePackage
+> Task :app:transformDebugClassesWithAsm
+> Task :app:mergeLibDexDebug
+> Task :app:mergeDebugJavaResource
+> Task :app:mergeExtDexDebug
+> Task :app:configureCMakeDebug[arm64-v8a]
+> Task :app:dexBuilderDebug
+> Task :app:mergeDebugGlobalSynthetics FROM-CACHE
+> Task :app:mergeProjectDexDebug
+> Task :react-native-reanimated:buildCMakeDebug[arm64-v8a]
+C/C++: Hard link from 'C:\Users\ASUS\.gradle\caches\8.10.2\transforms\0f839437195569227022e709030e837c\transformed\react-android-0.76.9-debug\prefab\modules\reactnative\libs\android.arm64-v8a\libreactnative.so' to 'E:\Rmz1Project\StudyManager\node_modules\react-native-reanimated\android\build\intermediates\cxx\Debug\2z2e3w5l\obj\arm64-v8a\libreactnative.so' failed. Doing a slower copy instead.
+C/C++: Hard link from 'C:\Users\ASUS\.gradle\caches\8.10.2\transforms\0f839437195569227022e709030e837c\transformed\react-android-0.76.9-debug\prefab\modules\reactnative\libs\android.arm64-v8a\libreactnative.so' to 'E:\Rmz1Project\StudyManager\node_modules\react-native-reanimated\android\build\intermediates\cxx\Debug\2z2e3w5l\obj\arm64-v8a\libreactnative.so' failed. Doing a slower copy instead.
+
+> Task :react-native-reanimated:externalNativeBuildDebug
+C/C++: Hard link from 'C:\Users\ASUS\.gradle\caches\8.10.2\transforms\0f839437195569227022e709030e837c\transformed\react-android-0.76.9-debug\prefab\modules\reactnative\libs\android.arm64-v8a\libreactnative.so' to 'E:\Rmz1Project\StudyManager\node_modules\react-native-reanimated\android\build\intermediates\cmake\debug\obj\arm64-v8a\libreactnative.so' failed. Doing a slower copy instead.
+C/C++: Hard link from 'C:\Users\ASUS\.gradle\caches\8.10.2\transforms\0f839437195569227022e709030e837c\transformed\react-android-0.76.9-debug\prefab\modules\reactnative\libs\android.arm64-v8a\libreactnative.so' to 'E:\Rmz1Project\StudyManager\node_modules\react-native-reanimated\android\build\intermediates\cmake\debug\obj\arm64-v8a\libreactnative.so' failed. Doing a slower copy instead.
+
+> Task :react-native-reanimated:prefabDebugPackage
+
+> Task :app:buildCMakeDebug[arm64-v8a]
+C/C++: ninja: Entering directory `E:\Rmz1Project\StudyManager\android\app\.cxx\Debug\x1c246b1\arm64-v8a'
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-safe-area-context/android/build/generated/source/codegen/jni/react/renderer/components/safeareacontext/EventEmitters.cpp:16:69: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++: void RNCSafeAreaProviderEventEmitter::onInsetsChange(OnInsetsChange $event) const {
+C/C++:                                                                     ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-safe-area-context/android/build/generated/source/codegen/jni/react/renderer/components/safeareacontext/EventEmitters.cpp:17:34: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:   dispatchEvent("insetsChange", [$event=std::move($event)](jsi::Runtime &runtime) {
+C/C++:                                  ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-safe-area-context/android/build/generated/source/codegen/jni/react/renderer/components/safeareacontext/EventEmitters.cpp:17:51: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:   dispatchEvent("insetsChange", [$event=std::move($event)](jsi::Runtime &runtime) {
+C/C++:                                                   ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-safe-area-context/android/build/generated/source/codegen/jni/react/renderer/components/safeareacontext/EventEmitters.cpp:18:10: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:     auto $payload = jsi::Object(runtime);
+C/C++:          ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-safe-area-context/android/build/generated/source/codegen/jni/react/renderer/components/safeareacontext/EventEmitters.cpp:21:38: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:   insets.setProperty(runtime, "top", $event.insets.top);
+C/C++:                                      ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-safe-area-context/android/build/generated/source/codegen/jni/react/renderer/components/safeareacontext/EventEmitters.cpp:22:40: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:   insets.setProperty(runtime, "right", $event.insets.right);
+C/C++:                                        ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-safe-area-context/android/build/generated/source/codegen/jni/react/renderer/components/safeareacontext/EventEmitters.cpp:23:41: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:   insets.setProperty(runtime, "bottom", $event.insets.bottom);
+C/C++:                                         ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-safe-area-context/android/build/generated/source/codegen/jni/react/renderer/components/safeareacontext/EventEmitters.cpp:24:39: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:   insets.setProperty(runtime, "left", $event.insets.left);
+C/C++:                                       ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-safe-area-context/android/build/generated/source/codegen/jni/react/renderer/components/safeareacontext/EventEmitters.cpp:25:3: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:   $payload.setProperty(runtime, "insets", insets);
+C/C++:   ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-safe-area-context/android/build/generated/source/codegen/jni/react/renderer/components/safeareacontext/EventEmitters.cpp:29:35: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:   frame.setProperty(runtime, "x", $event.frame.x);
+C/C++:                                   ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-safe-area-context/android/build/generated/source/codegen/jni/react/renderer/components/safeareacontext/EventEmitters.cpp:30:35: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:   frame.setProperty(runtime, "y", $event.frame.y);
+C/C++:                                   ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-safe-area-context/android/build/generated/source/codegen/jni/react/renderer/components/safeareacontext/EventEmitters.cpp:31:39: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:   frame.setProperty(runtime, "width", $event.frame.width);
+C/C++:                                       ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-safe-area-context/android/build/generated/source/codegen/jni/react/renderer/components/safeareacontext/EventEmitters.cpp:32:40: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:   frame.setProperty(runtime, "height", $event.frame.height);
+C/C++:                                        ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-safe-area-context/android/build/generated/source/codegen/jni/react/renderer/components/safeareacontext/EventEmitters.cpp:33:3: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:   $payload.setProperty(runtime, "frame", frame);
+C/C++:   ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-safe-area-context/android/build/generated/source/codegen/jni/react/renderer/components/safeareacontext/EventEmitters.cpp:35:12: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:     return $payload;
+C/C++:            ^
+C/C++: 15 warnings generated.
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:17:52: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++: void RNSModalScreenEventEmitter::onAppear(OnAppear $event) const {
+C/C++:                                                    ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:19:10: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:     auto $payload = jsi::Object(runtime);
+C/C++:          ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:21:12: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:     return $payload;
+C/C++:            ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:26:58: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++: void RNSModalScreenEventEmitter::onDisappear(OnDisappear $event) const {
+C/C++:                                                          ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:28:10: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:     auto $payload = jsi::Object(runtime);
+C/C++:          ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:30:12: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:     return $payload;
+C/C++:            ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:35:58: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++: void RNSModalScreenEventEmitter::onDismissed(OnDismissed $event) const {
+C/C++:                                                          ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:36:31: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:   dispatchEvent("dismissed", [$event=std::move($event)](jsi::Runtime &runtime) {
+C/C++:                               ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:36:48: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:   dispatchEvent("dismissed", [$event=std::move($event)](jsi::Runtime &runtime) {
+C/C++:                                                ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:37:10: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:     auto $payload = jsi::Object(runtime);
+C/C++:          ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:38:5: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:     $payload.setProperty(runtime, "dismissCount", $event.dismissCount);
+C/C++:     ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:38:51: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:     $payload.setProperty(runtime, "dismissCount", $event.dismissCount);
+C/C++:                                                   ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:39:12: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:     return $payload;
+C/C++:            ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:44:84: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++: void RNSModalScreenEventEmitter::onNativeDismissCancelled(OnNativeDismissCancelled $event) const {
+C/C++:                                                                                    ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:45:44: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:   dispatchEvent("nativeDismissCancelled", [$event=std::move($event)](jsi::Runtime &runtime) {
+C/C++:                                            ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:45:61: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:   dispatchEvent("nativeDismissCancelled", [$event=std::move($event)](jsi::Runtime &runtime) {
+C/C++:                                                             ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:46:10: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:     auto $payload = jsi::Object(runtime);
+C/C++:          ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:47:5: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:     $payload.setProperty(runtime, "dismissCount", $event.dismissCount);
+C/C++:     ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:47:51: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:     $payload.setProperty(runtime, "dismissCount", $event.dismissCount);
+C/C++:                                                   ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:48:12: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:     return $payload;
+C/C++:            ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:53:60: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++: void RNSModalScreenEventEmitter::onWillAppear(OnWillAppear $event) const {
+C/C++:                                                            ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:55:10: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:     auto $payload = jsi::Object(runtime);
+C/C++:          ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:57:12: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:     return $payload;
+C/C++:            ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:62:66: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++: void RNSModalScreenEventEmitter::onWillDisappear(OnWillDisappear $event) const {
+C/C++:                                                                  ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:64:10: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:     auto $payload = jsi::Object(runtime);
+C/C++:          ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:66:12: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:     return $payload;
+C/C++:            ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:71:76: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++: void RNSModalScreenEventEmitter::onHeaderHeightChange(OnHeaderHeightChange $event) const {
+C/C++:                                                                            ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:72:40: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:   dispatchEvent("headerHeightChange", [$event=std::move($event)](jsi::Runtime &runtime) {
+C/C++:                                        ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:72:57: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:   dispatchEvent("headerHeightChange", [$event=std::move($event)](jsi::Runtime &runtime) {
+C/C++:                                                         ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:73:10: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:     auto $payload = jsi::Object(runtime);
+C/C++:          ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:74:5: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:     $payload.setProperty(runtime, "headerHeight", $event.headerHeight);
+C/C++:     ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:74:51: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:     $payload.setProperty(runtime, "headerHeight", $event.headerHeight);
+C/C++:                                                   ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:75:12: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:     return $payload;
+C/C++:            ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:80:76: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++: void RNSModalScreenEventEmitter::onTransitionProgress(OnTransitionProgress $event) const {
+C/C++:                                                                            ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:81:40: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:   dispatchEvent("transitionProgress", [$event=std::move($event)](jsi::Runtime &runtime) {
+C/C++:                                        ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:81:57: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:   dispatchEvent("transitionProgress", [$event=std::move($event)](jsi::Runtime &runtime) {
+C/C++:                                                         ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:82:10: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:     auto $payload = jsi::Object(runtime);
+C/C++:          ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:83:5: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:     $payload.setProperty(runtime, "progress", $event.progress);
+C/C++:     ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:83:47: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:     $payload.setProperty(runtime, "progress", $event.progress);
+C/C++:                                               ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:84:1: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++: $payload.setProperty(runtime, "closing", $event.closing);
+C/C++: ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:84:42: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++: $payload.setProperty(runtime, "closing", $event.closing);
+C/C++:                                          ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:85:1: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++: $payload.setProperty(runtime, "goingForward", $event.goingForward);
+C/C++: ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:85:47: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++: $payload.setProperty(runtime, "goingForward", $event.goingForward);
+C/C++:                                               ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:86:12: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:     return $payload;
+C/C++:            ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:91:66: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++: void RNSModalScreenEventEmitter::onGestureCancel(OnGestureCancel $event) const {
+C/C++:                                                                  ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:93:10: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:     auto $payload = jsi::Object(runtime);
+C/C++:          ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:95:12: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:     return $payload;
+C/C++:            ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:100:86: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++: void RNSModalScreenEventEmitter::onHeaderBackButtonClicked(OnHeaderBackButtonClicked $event) const {
+C/C++:                                                                                      ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:102:10: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:     auto $payload = jsi::Object(runtime);
+C/C++:          ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:104:12: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:     return $payload;
+C/C++:            ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:109:76: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++: void RNSModalScreenEventEmitter::onSheetDetentChanged(OnSheetDetentChanged $event) const {
+C/C++:                                                                            ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:110:40: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:   dispatchEvent("sheetDetentChanged", [$event=std::move($event)](jsi::Runtime &runtime) {
+C/C++:                                        ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:110:57: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:   dispatchEvent("sheetDetentChanged", [$event=std::move($event)](jsi::Runtime &runtime) {
+C/C++:                                                         ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:111:10: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:     auto $payload = jsi::Object(runtime);
+C/C++:          ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:112:5: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:     $payload.setProperty(runtime, "index", $event.index);
+C/C++:     ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:112:44: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:     $payload.setProperty(runtime, "index", $event.index);
+C/C++:                                            ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:113:1: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++: $payload.setProperty(runtime, "isStable", $event.isStable);
+C/C++: ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:113:43: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++: $payload.setProperty(runtime, "isStable", $event.isStable);
+C/C++:                                           ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:114:12: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:     return $payload;
+C/C++:            ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:122:47: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++: void RNSScreenEventEmitter::onAppear(OnAppear $event) const {
+C/C++:                                               ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:124:10: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:     auto $payload = jsi::Object(runtime);
+C/C++:          ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:126:12: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:     return $payload;
+C/C++:            ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:131:53: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++: void RNSScreenEventEmitter::onDisappear(OnDisappear $event) const {
+C/C++:                                                     ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:133:10: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:     auto $payload = jsi::Object(runtime);
+C/C++:          ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:135:12: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:     return $payload;
+C/C++:            ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:140:53: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++: void RNSScreenEventEmitter::onDismissed(OnDismissed $event) const {
+C/C++:                                                     ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:141:31: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:   dispatchEvent("dismissed", [$event=std::move($event)](jsi::Runtime &runtime) {
+C/C++:                               ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:141:48: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:   dispatchEvent("dismissed", [$event=std::move($event)](jsi::Runtime &runtime) {
+C/C++:                                                ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:142:10: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:     auto $payload = jsi::Object(runtime);
+C/C++:          ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:143:5: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:     $payload.setProperty(runtime, "dismissCount", $event.dismissCount);
+C/C++:     ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:143:51: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:     $payload.setProperty(runtime, "dismissCount", $event.dismissCount);
+C/C++:                                                   ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:144:12: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:     return $payload;
+C/C++:            ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:149:79: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++: void RNSScreenEventEmitter::onNativeDismissCancelled(OnNativeDismissCancelled $event) const {
+C/C++:                                                                               ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:150:44: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:   dispatchEvent("nativeDismissCancelled", [$event=std::move($event)](jsi::Runtime &runtime) {
+C/C++:                                            ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:150:61: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:   dispatchEvent("nativeDismissCancelled", [$event=std::move($event)](jsi::Runtime &runtime) {
+C/C++:                                                             ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:151:10: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:     auto $payload = jsi::Object(runtime);
+C/C++:          ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:152:5: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:     $payload.setProperty(runtime, "dismissCount", $event.dismissCount);
+C/C++:     ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:152:51: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:     $payload.setProperty(runtime, "dismissCount", $event.dismissCount);
+C/C++:                                                   ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:153:12: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:     return $payload;
+C/C++:            ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:158:55: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++: void RNSScreenEventEmitter::onWillAppear(OnWillAppear $event) const {
+C/C++:                                                       ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:160:10: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:     auto $payload = jsi::Object(runtime);
+C/C++:          ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:162:12: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:     return $payload;
+C/C++:            ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:167:61: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++: void RNSScreenEventEmitter::onWillDisappear(OnWillDisappear $event) const {
+C/C++:                                                             ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:169:10: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:     auto $payload = jsi::Object(runtime);
+C/C++:          ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:171:12: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:     return $payload;
+C/C++:            ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:176:71: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++: void RNSScreenEventEmitter::onHeaderHeightChange(OnHeaderHeightChange $event) const {
+C/C++:                                                                       ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:177:40: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:   dispatchEvent("headerHeightChange", [$event=std::move($event)](jsi::Runtime &runtime) {
+C/C++:                                        ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:177:57: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:   dispatchEvent("headerHeightChange", [$event=std::move($event)](jsi::Runtime &runtime) {
+C/C++:                                                         ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:178:10: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:     auto $payload = jsi::Object(runtime);
+C/C++:          ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:179:5: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:     $payload.setProperty(runtime, "headerHeight", $event.headerHeight);
+C/C++:     ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:179:51: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:     $payload.setProperty(runtime, "headerHeight", $event.headerHeight);
+C/C++:                                                   ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:180:12: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:     return $payload;
+C/C++:            ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:185:71: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++: void RNSScreenEventEmitter::onTransitionProgress(OnTransitionProgress $event) const {
+C/C++:                                                                       ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:186:40: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:   dispatchEvent("transitionProgress", [$event=std::move($event)](jsi::Runtime &runtime) {
+C/C++:                                        ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:186:57: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:   dispatchEvent("transitionProgress", [$event=std::move($event)](jsi::Runtime &runtime) {
+C/C++:                                                         ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:187:10: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:     auto $payload = jsi::Object(runtime);
+C/C++:          ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:188:5: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:     $payload.setProperty(runtime, "progress", $event.progress);
+C/C++:     ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:188:47: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:     $payload.setProperty(runtime, "progress", $event.progress);
+C/C++:                                               ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:189:1: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++: $payload.setProperty(runtime, "closing", $event.closing);
+C/C++: ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:189:42: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++: $payload.setProperty(runtime, "closing", $event.closing);
+C/C++:                                          ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:190:1: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++: $payload.setProperty(runtime, "goingForward", $event.goingForward);
+C/C++: ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:190:47: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++: $payload.setProperty(runtime, "goingForward", $event.goingForward);
+C/C++:                                               ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:191:12: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:     return $payload;
+C/C++:            ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:196:61: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++: void RNSScreenEventEmitter::onGestureCancel(OnGestureCancel $event) const {
+C/C++:                                                             ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:198:10: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:     auto $payload = jsi::Object(runtime);
+C/C++:          ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:200:12: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:     return $payload;
+C/C++:            ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:205:81: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++: void RNSScreenEventEmitter::onHeaderBackButtonClicked(OnHeaderBackButtonClicked $event) const {
+C/C++:                                                                                 ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:207:10: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:     auto $payload = jsi::Object(runtime);
+C/C++:          ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:209:12: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:     return $payload;
+C/C++:            ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:214:71: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++: void RNSScreenEventEmitter::onSheetDetentChanged(OnSheetDetentChanged $event) const {
+C/C++:                                                                       ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:215:40: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:   dispatchEvent("sheetDetentChanged", [$event=std::move($event)](jsi::Runtime &runtime) {
+C/C++:                                        ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:215:57: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:   dispatchEvent("sheetDetentChanged", [$event=std::move($event)](jsi::Runtime &runtime) {
+C/C++:                                                         ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:216:10: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:     auto $payload = jsi::Object(runtime);
+C/C++:          ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:217:5: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:     $payload.setProperty(runtime, "index", $event.index);
+C/C++:     ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:217:44: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:     $payload.setProperty(runtime, "index", $event.index);
+C/C++:                                            ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:218:1: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++: $payload.setProperty(runtime, "isStable", $event.isStable);
+C/C++: ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:218:43: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++: $payload.setProperty(runtime, "isStable", $event.isStable);
+C/C++:                                           ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:219:12: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:     return $payload;
+C/C++:            ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:225:68: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++: void RNSScreenStackHeaderConfigEventEmitter::onAttached(OnAttached $event) const {
+C/C++:                                                                    ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:227:10: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:     auto $payload = jsi::Object(runtime);
+C/C++:          ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:229:12: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:     return $payload;
+C/C++:            ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:234:68: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++: void RNSScreenStackHeaderConfigEventEmitter::onDetached(OnDetached $event) const {
+C/C++:                                                                    ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:236:10: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:     auto $payload = jsi::Object(runtime);
+C/C++:          ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:238:12: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:     return $payload;
+C/C++:            ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:244:78: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++: void RNSScreenStackEventEmitter::onFinishTransitioning(OnFinishTransitioning $event) const {
+C/C++:                                                                              ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:246:10: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:     auto $payload = jsi::Object(runtime);
+C/C++:          ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:248:12: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:     return $payload;
+C/C++:            ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:253:60: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++: void RNSSearchBarEventEmitter::onSearchFocus(OnSearchFocus $event) const {
+C/C++:                                                            ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:255:10: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:     auto $payload = jsi::Object(runtime);
+C/C++:          ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:257:12: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:     return $payload;
+C/C++:            ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:262:58: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++: void RNSSearchBarEventEmitter::onSearchBlur(OnSearchBlur $event) const {
+C/C++:                                                          ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:264:10: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:     auto $payload = jsi::Object(runtime);
+C/C++:          ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:266:12: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:     return $payload;
+C/C++:            ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:271:72: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++: void RNSSearchBarEventEmitter::onSearchButtonPress(OnSearchButtonPress $event) const {
+C/C++:                                                                        ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:272:39: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:   dispatchEvent("searchButtonPress", [$event=std::move($event)](jsi::Runtime &runtime) {
+C/C++:                                       ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:272:56: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:   dispatchEvent("searchButtonPress", [$event=std::move($event)](jsi::Runtime &runtime) {
+C/C++:                                                        ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:273:10: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:     auto $payload = jsi::Object(runtime);
+C/C++:          ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:274:5: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:     $payload.setProperty(runtime, "text", $event.text);
+C/C++:     ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:274:43: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:     $payload.setProperty(runtime, "text", $event.text);
+C/C++:                                           ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:275:12: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:     return $payload;
+C/C++:            ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:280:72: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++: void RNSSearchBarEventEmitter::onCancelButtonPress(OnCancelButtonPress $event) const {
+C/C++:                                                                        ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:282:10: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:     auto $payload = jsi::Object(runtime);
+C/C++:          ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:284:12: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:     return $payload;
+C/C++:            ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:289:58: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++: void RNSSearchBarEventEmitter::onChangeText(OnChangeText $event) const {
+C/C++:                                                          ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:290:32: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:   dispatchEvent("changeText", [$event=std::move($event)](jsi::Runtime &runtime) {
+C/C++:                                ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:290:49: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:   dispatchEvent("changeText", [$event=std::move($event)](jsi::Runtime &runtime) {
+C/C++:                                                 ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:291:10: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:     auto $payload = jsi::Object(runtime);
+C/C++:          ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:292:5: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:     $payload.setProperty(runtime, "text", $event.text);
+C/C++:     ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:292:43: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:     $payload.setProperty(runtime, "text", $event.text);
+C/C++:                                           ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:293:12: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:     return $payload;
+C/C++:            ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:298:48: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++: void RNSSearchBarEventEmitter::onClose(OnClose $event) const {
+C/C++:                                                ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:300:10: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:     auto $payload = jsi::Object(runtime);
+C/C++:          ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:302:12: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:     return $payload;
+C/C++:            ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:307:46: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++: void RNSSearchBarEventEmitter::onOpen(OnOpen $event) const {
+C/C++:                                              ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:309:10: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:     auto $payload = jsi::Object(runtime);
+C/C++:          ^
+C/C++: E:/Rmz1Project/StudyManager/node_modules/react-native-screens/android/build/generated/source/codegen/jni/react/renderer/components/rnscreens/EventEmitters.cpp:311:12: warning: '$' in identifier [-Wdollar-in-identifier-extension]
+C/C++:     return $payload;
+C/C++:            ^
+C/C++: 156 warnings generated.
+C/C++: Hard link from 'C:\Users\ASUS\.gradle\caches\8.10.2\transforms\0f839437195569227022e709030e837c\transformed\react-android-0.76.9-debug\prefab\modules\reactnative\libs\android.arm64-v8a\libreactnative.so' to 'E:\Rmz1Project\StudyManager\android\app\build\intermediates\cxx\Debug\x1c246b1\obj\arm64-v8a\libreactnative.so' failed. Doing a slower copy instead.
+C/C++: Hard link from 'C:\Users\ASUS\.gradle\caches\8.10.2\transforms\0f839437195569227022e709030e837c\transformed\react-android-0.76.9-debug\prefab\modules\reactnative\libs\android.arm64-v8a\libreactnative.so' to 'E:\Rmz1Project\StudyManager\android\app\build\intermediates\cxx\Debug\x1c246b1\obj\arm64-v8a\libreactnative.so' failed. Doing a slower copy instead.
+
+> Task :app:mergeDebugJniLibFolders
+> Task :expo:mergeDebugJniLibFolders
+> Task :expo:mergeDebugNativeLibs NO-SOURCE
+> Task :expo-asset:mergeDebugJniLibFolders
+> Task :expo-asset:mergeDebugNativeLibs NO-SOURCE
+> Task :expo:copyDebugJniLibsProjectOnly
+> Task :expo-asset:copyDebugJniLibsProjectOnly
+> Task :expo-constants:mergeDebugJniLibFolders
+> Task :expo-constants:mergeDebugNativeLibs NO-SOURCE
+> Task :expo-constants:copyDebugJniLibsProjectOnly
+> Task :expo-crypto:mergeDebugJniLibFolders
+> Task :expo-crypto:mergeDebugNativeLibs NO-SOURCE
+> Task :expo-crypto:copyDebugJniLibsProjectOnly
+> Task :expo-dev-client:mergeDebugJniLibFolders
+> Task :expo-dev-client:mergeDebugNativeLibs NO-SOURCE
+> Task :expo-dev-client:copyDebugJniLibsProjectOnly
+> Task :expo-dev-launcher:mergeDebugJniLibFolders
+> Task :expo-dev-launcher:mergeDebugNativeLibs NO-SOURCE
+> Task :expo-dev-launcher:copyDebugJniLibsProjectOnly
+> Task :expo-dev-menu:mergeDebugJniLibFolders
+> Task :expo-dev-menu:mergeDebugNativeLibs NO-SOURCE
+> Task :expo-dev-menu:copyDebugJniLibsProjectOnly
+> Task :expo-dev-menu-interface:mergeDebugJniLibFolders
+> Task :expo-dev-menu-interface:mergeDebugNativeLibs NO-SOURCE
+> Task :expo-dev-menu-interface:copyDebugJniLibsProjectOnly
+> Task :expo-font:mergeDebugJniLibFolders
+> Task :expo-font:mergeDebugNativeLibs NO-SOURCE
+> Task :expo-font:copyDebugJniLibsProjectOnly
+> Task :expo-json-utils:mergeDebugJniLibFolders
+> Task :expo-json-utils:mergeDebugNativeLibs NO-SOURCE
+> Task :expo-json-utils:copyDebugJniLibsProjectOnly
+> Task :expo-linking:mergeDebugJniLibFolders
+> Task :expo-linking:mergeDebugNativeLibs NO-SOURCE
+> Task :expo-linking:copyDebugJniLibsProjectOnly
+> Task :expo-manifests:mergeDebugJniLibFolders
+> Task :expo-manifests:mergeDebugNativeLibs NO-SOURCE
+> Task :expo-manifests:copyDebugJniLibsProjectOnly
+> Task :expo-modules-core:configureCMakeDebug[arm64-v8a]
+> Task :expo-modules-core:buildCMakeDebug[arm64-v8a]
+C/C++: Hard link from 'C:\Users\ASUS\.gradle\caches\8.10.2\transforms\0f839437195569227022e709030e837c\transformed\react-android-0.76.9-debug\prefab\modules\reactnative\libs\android.arm64-v8a\libreactnative.so' to 'E:\Rmz1Project\StudyManager\node_modules\expo-modules-core\android\build\intermediates\cxx\Debug\27116k5o\obj\arm64-v8a\libreactnative.so' failed. Doing a slower copy instead.
+C/C++: Hard link from 'C:\Users\ASUS\.gradle\caches\8.10.2\transforms\0f839437195569227022e709030e837c\transformed\react-android-0.76.9-debug\prefab\modules\reactnative\libs\android.arm64-v8a\libreactnative.so' to 'E:\Rmz1Project\StudyManager\node_modules\expo-modules-core\android\build\intermediates\cxx\Debug\27116k5o\obj\arm64-v8a\libreactnative.so' failed. Doing a slower copy instead.
+
+> Task :expo-modules-core:mergeDebugJniLibFolders
+> Task :expo-splash-screen:mergeDebugJniLibFolders
+> Task :expo-splash-screen:mergeDebugNativeLibs NO-SOURCE
+> Task :expo-splash-screen:copyDebugJniLibsProjectOnly
+> Task :expo-updates-interface:mergeDebugJniLibFolders
+> Task :expo-updates-interface:mergeDebugNativeLibs NO-SOURCE
+> Task :expo-updates-interface:copyDebugJniLibsProjectOnly
+> Task :expo-web-browser:mergeDebugJniLibFolders
+> Task :expo-web-browser:mergeDebugNativeLibs NO-SOURCE
+> Task :expo-web-browser:copyDebugJniLibsProjectOnly
+> Task :react-native-async-storage_async-storage:mergeDebugJniLibFolders
+> Task :react-native-async-storage_async-storage:mergeDebugNativeLibs NO-SOURCE
+> Task :react-native-async-storage_async-storage:copyDebugJniLibsProjectOnly
+> Task :react-native-date-picker:mergeDebugJniLibFolders
+> Task :react-native-date-picker:mergeDebugNativeLibs NO-SOURCE
+> Task :react-native-date-picker:copyDebugJniLibsProjectOnly
+> Task :expo-modules-core:mergeDebugNativeLibs
+> Task :react-native-gesture-handler:configureCMakeDebug[arm64-v8a]
+> Task :expo-modules-core:copyDebugJniLibsProjectOnly
+
+> Task :react-native-gesture-handler:buildCMakeDebug[arm64-v8a]
+C/C++: Hard link from 'C:\Users\ASUS\.gradle\caches\8.10.2\transforms\0f839437195569227022e709030e837c\transformed\react-android-0.76.9-debug\prefab\modules\reactnative\libs\android.arm64-v8a\libreactnative.so' to 'E:\Rmz1Project\StudyManager\node_modules\react-native-gesture-handler\android\build\intermediates\cxx\Debug\2f2q5274\obj\arm64-v8a\libreactnative.so' failed. Doing a slower copy instead.
+C/C++: Hard link from 'C:\Users\ASUS\.gradle\caches\8.10.2\transforms\0f839437195569227022e709030e837c\transformed\react-android-0.76.9-debug\prefab\modules\reactnative\libs\android.arm64-v8a\libreactnative.so' to 'E:\Rmz1Project\StudyManager\node_modules\react-native-gesture-handler\android\build\intermediates\cxx\Debug\2f2q5274\obj\arm64-v8a\libreactnative.so' failed. Doing a slower copy instead.
+
+> Task :react-native-gesture-handler:mergeDebugJniLibFolders
+> Task :react-native-google-signin_google-signin:mergeDebugJniLibFolders
+> Task :react-native-gesture-handler:mergeDebugNativeLibs
+> Task :react-native-google-signin_google-signin:mergeDebugNativeLibs NO-SOURCE
+> Task :react-native-google-signin_google-signin:copyDebugJniLibsProjectOnly
+> Task :react-native-gesture-handler:copyDebugJniLibsProjectOnly
+> Task :react-native-reanimated:mergeDebugJniLibFolders
+> Task :react-native-safe-area-context:mergeDebugJniLibFolders
+> Task :react-native-safe-area-context:mergeDebugNativeLibs NO-SOURCE
+> Task :react-native-safe-area-context:copyDebugJniLibsProjectOnly
+> Task :react-native-reanimated:mergeDebugNativeLibs
+> Task :react-native-screens:configureCMakeDebug[arm64-v8a]
+> Task :react-native-reanimated:copyDebugJniLibsProjectOnly
+
+> Task :react-native-screens:buildCMakeDebug[arm64-v8a]
+C/C++: Hard link from 'C:\Users\ASUS\.gradle\caches\8.10.2\transforms\0f839437195569227022e709030e837c\transformed\react-android-0.76.9-debug\prefab\modules\reactnative\libs\android.arm64-v8a\libreactnative.so' to 'E:\Rmz1Project\StudyManager\node_modules\react-native-screens\android\build\intermediates\cxx\Debug\4s46c256\obj\arm64-v8a\libreactnative.so' failed. Doing a slower copy instead.
+C/C++: Hard link from 'C:\Users\ASUS\.gradle\caches\8.10.2\transforms\0f839437195569227022e709030e837c\transformed\react-android-0.76.9-debug\prefab\modules\reactnative\libs\android.arm64-v8a\libreactnative.so' to 'E:\Rmz1Project\StudyManager\node_modules\react-native-screens\android\build\intermediates\cxx\Debug\4s46c256\obj\arm64-v8a\libreactnative.so' failed. Doing a slower copy instead.
+
+> Task :react-native-screens:mergeDebugJniLibFolders
+> Task :react-native-vector-icons:mergeDebugJniLibFolders
+> Task :react-native-vector-icons:mergeDebugNativeLibs NO-SOURCE
+> Task :react-native-vector-icons:copyDebugJniLibsProjectOnly
+> Task :react-native-webview:mergeDebugJniLibFolders
+> Task :react-native-webview:mergeDebugNativeLibs NO-SOURCE
+> Task :react-native-webview:copyDebugJniLibsProjectOnly
+> Task :app:validateSigningDebug
+> Task :app:writeDebugAppMetadata
+> Task :app:writeDebugSigningConfigVersions
+> Task :react-native-screens:mergeDebugNativeLibs
+> Task :react-native-screens:copyDebugJniLibsProjectOnly
+> Task :app:mergeDebugNativeLibs
+> Task :app:stripDebugDebugSymbols
+> Task :app:packageDebug
+> Task :app:createDebugApkListingFileRedirect
+> Task :app:assembleDebug
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.10.2/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD SUCCESSFUL in 5m 20s
+615 actionable tasks: 347 executed, 253 from cache, 15 up-to-date
+Metro is running in CI mode, reloads are disabled. Remove CI=true to enable watch mode.
+Starting Metro Bundler
+Waiting on http://localhost:8081
+ΓÇ║ Installing E:\Rmz1Project\StudyManager\android\app\build\outputs\apk\debug\app-debug.apk
+ΓÇ║ Opening exp+studymanager://expo-development-client/?url=http%3A%2F%2F192.168.0.101%3A8081 on CPH2621
+
+ΓÇ║ Logs for your project will appear below.
+| [baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+| [baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+| [baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+| [baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+| [baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+| [baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+| [baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+| [baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+| [baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+| [baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+Android Bundled 2534ms index.js (1693 modules)
+ (NOBRIDGE) LOG  Bridgeless mode is enabled
+ INFO  
+[7m [1m≡ƒÆí JavaScript logs will be removed from Metro in React Native 0.77![22m Please use React Native DevTools as your default tool. Tip: Type [1mj[22m in the terminal to open (requires Google Chrome or Microsoft Edge).[27m
+ (NOBRIDGE) ERROR  Google Calendar connection error: [Error: DEVELOPER_ERROR: Follow troubleshooting instructions at https://react-native-google-signin.github.io/docs/troubleshooting]
+ (NOBRIDGE) ERROR  Google Calendar connection error: [Error: DEVELOPER_ERROR: Follow troubleshooting instructions at https://react-native-google-signin.github.io/docs/troubleshooting]
