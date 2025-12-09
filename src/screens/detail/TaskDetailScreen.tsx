@@ -8,6 +8,7 @@ import {
   Alert,
   Animated,
   Modal,
+  Linking,
 } from 'react-native';
 import { MaterialIcons as Icon } from '@expo/vector-icons';
 import { useAuth } from '../../context/AuthContext';
@@ -16,6 +17,7 @@ import TaskService from '../../services/taskService';
 
 const TaskDetailScreen = ({ navigation, route }: any) => {
   const { task: initialTask } = route.params;
+  const { user } = useAuth();
   const [task, setTask] = useState<Task>(initialTask);
   const [showStatusModal, setShowStatusModal] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -146,6 +148,11 @@ const TaskDetailScreen = ({ navigation, route }: any) => {
 
   const isOverdue = task.due_date && new Date(task.due_date) < new Date() && task.status !== 'completed';
 
+  const stripHtml = (html: string) => {
+    if (!html) return '';
+    return html.replace(/<[^>]*>?/gm, '');
+  };
+
   return (
     <View style={styles.container}>
       <Animated.View
@@ -182,7 +189,7 @@ const TaskDetailScreen = ({ navigation, route }: any) => {
             <Text style={styles.taskTitle}>{task.title}</Text>
 
             {task.description && (
-              <Text style={styles.taskDescription}>{task.description}</Text>
+              <Text style={styles.taskDescription}>{stripHtml(task.description)}</Text>
             )}
 
             <View style={styles.taskMeta}>
@@ -244,10 +251,25 @@ const TaskDetailScreen = ({ navigation, route }: any) => {
             {task.canvas_assignment_id && (
               <TouchableOpacity
                 style={styles.viewInCanvasButton}
-                onPress={() => navigation.navigate('CanvasWebView', {
-                  url: `${task.canvas_assignment_id}`, // You'll need to construct the full URL
-                  title: task.title,
-                })}
+                onPress={async () => {
+                  const url = task.canvas_assignment_id;
+                  if (url && url.startsWith('http')) {
+                    try {
+                      await Linking.openURL(url);
+                    } catch (e) {
+                      Alert.alert('Error', 'Could not open assignment link');
+                    }
+                  } else if (user?.canvas_url) {
+                    // Fallback to Dashboard if we don't have a specific deep link
+                    try {
+                      await Linking.openURL(user.canvas_url);
+                    } catch (e) {
+                      Alert.alert('Error', 'Could not open Canvas URL');
+                    }
+                  } else {
+                    Alert.alert('Error', 'Link not available');
+                  }
+                }}
               >
                 <Icon name="open-in-browser" size={16} color="#6366F1" />
                 <Text style={styles.viewInCanvasText}>View in Canvas</Text>
@@ -303,7 +325,7 @@ const TaskDetailScreen = ({ navigation, route }: any) => {
 
         <StatusModal />
       </Animated.View>
-    </View>
+    </View >
   );
 };
 

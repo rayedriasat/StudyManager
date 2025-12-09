@@ -19,7 +19,7 @@ import ProfileScreen from '../screens/main/ProfileScreen';
 
 // Detail Screens
 import TaskDetailScreen from '../screens/detail/TaskDetailScreen';
-import CanvasWebViewScreen from '../screens/detail/CanvasWebViewScreen';
+
 import AddTaskScreen from '../screens/detail/AddTaskScreen';
 import CanvasSetupScreen from '../screens/setup/CanvasSetupScreen';
 
@@ -127,7 +127,7 @@ const MainStack = () => {
     >
       <Stack.Screen name="MainTabs" component={TabNavigator} />
       <Stack.Screen name="TaskDetail" component={TaskDetailScreen} />
-      <Stack.Screen name="CanvasWebView" component={CanvasWebViewScreen} />
+
       <Stack.Screen name="AddTask" component={AddTaskScreen} />
       <Stack.Screen name="CanvasSetup" component={CanvasSetupScreen} />
     </Stack.Navigator>

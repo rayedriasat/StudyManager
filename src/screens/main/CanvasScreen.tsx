@@ -10,6 +10,7 @@ import {
   Animated,
   RefreshControl,
   Modal,
+  Linking,
 } from 'react-native';
 import { MaterialIcons as Icon } from '@expo/vector-icons';
 import { useAuth } from '../../context/AuthContext';
@@ -97,6 +98,22 @@ const CanvasScreen = ({ navigation }: any) => {
     setRefreshing(false);
   };
 
+  const handleOpenLink = async (url: string) => {
+    try {
+      const supported = await Linking.canOpenURL(url);
+
+      if (supported) {
+        await Linking.openURL(url);
+      } else {
+        Alert.alert('Error', `Don't know how to open this URL: ${url}`);
+      }
+    } catch (error) {
+      console.error('Error opening link:', error);
+      Alert.alert('Error', 'Failed to open link');
+    }
+  };
+
+
   const setupCanvas = async () => {
     if (!canvasUrl || !accessToken) {
       Alert.alert('Error', 'Please fill in both Canvas URL and Access Token');
@@ -139,7 +156,7 @@ const CanvasScreen = ({ navigation }: any) => {
         priority: 'medium',
         status: 'pending',
         source: 'canvas',
-        canvas_assignment_id: assignment.id.toString(),
+        canvas_assignment_id: assignment.html_url,
       });
 
       Alert.alert('Success', 'Assignment synced to tasks successfully!');
@@ -172,7 +189,7 @@ const CanvasScreen = ({ navigation }: any) => {
                   priority: 'medium',
                   status: 'pending',
                   source: 'canvas',
-                  canvas_assignment_id: assignment.id.toString(),
+                  canvas_assignment_id: assignment.html_url,
                 });
               }
 
@@ -236,10 +253,7 @@ const CanvasScreen = ({ navigation }: any) => {
           <View style={styles.assignmentActions}>
             <TouchableOpacity
               style={styles.actionButton}
-              onPress={() => navigation.navigate('CanvasWebView', {
-                url: assignment.html_url,
-                title: assignment.name,
-              })}
+              onPress={() => handleOpenLink(assignment.html_url)}
             >
               <Icon name="open-in-browser" size={20} color="#6366F1" />
             </TouchableOpacity>
@@ -447,7 +461,38 @@ const CanvasScreen = ({ navigation }: any) => {
               <Text style={styles.statValue}>{assignments.length}</Text>
               <Text style={styles.statLabel}>Upcoming Assignments</Text>
             </View>
+
           </View>
+
+          {/* Courses Section */}
+          <View style={styles.assignmentsSection}>
+            <Text style={styles.sectionTitle}>Your Courses</Text>
+            {courses.length > 0 ? (
+              courses.map((course) => (
+                <View key={`course-${course.id}`} style={styles.assignmentCard}>
+                  <View style={styles.assignmentHeader}>
+                    <View style={styles.assignmentInfo}>
+                      <Text style={styles.assignmentTitle} numberOfLines={1}>
+                        {course.name}
+                      </Text>
+                      <Text style={styles.courseName}>{course.course_code}</Text>
+                    </View>
+                    <TouchableOpacity
+                      style={styles.actionButton}
+                      onPress={() => handleOpenLink(`${canvasUrl}/courses/${course.id}`)}
+                    >
+                      <Icon name="open-in-browser" size={20} color="#6366F1" />
+                    </TouchableOpacity>
+                  </View>
+                </View>
+              ))
+            ) : (
+              <View style={styles.emptyState}>
+                <Text style={styles.emptyStateSubtitle}>No active courses found</Text>
+              </View>
+            )}
+          </View>
+
 
           {/* Sync Actions */}
           {assignments.length > 0 ? (
