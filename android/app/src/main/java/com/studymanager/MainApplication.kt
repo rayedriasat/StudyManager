@@ -1,4 +1,4 @@
-package com.studymanager.app
+package com.studymanager
 
 import android.app.Application
 import android.content.res.Configuration

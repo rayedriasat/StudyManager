@@ -1,4 +1,4 @@
-package com.studymanager.app
+package com.studymanager
 import expo.modules.splashscreen.SplashScreenManager
 
 import android.os.Build

@@ -23,7 +23,7 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.studymanager.app"
+      "package": "com.studymanager"
     },
     "plugins": [
       [
