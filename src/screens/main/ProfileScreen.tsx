@@ -209,6 +209,14 @@ const ProfileScreen = ({ navigation }: any) => {
                 color="#10B981"
                 onPress={() => navigation.navigate('Calendar')}
               />
+
+              <ProfileOption
+                icon="bar-chart"
+                title="Progress Report"
+                subtitle="View your study statistics"
+                color="#EC4899" // Pink-500
+                onPress={() => navigation.navigate('Report')}
+              />
             </View>
           </View>
 

@@ -22,6 +22,7 @@ import TaskDetailScreen from '../screens/detail/TaskDetailScreen';
 
 import AddTaskScreen from '../screens/detail/AddTaskScreen';
 import CanvasSetupScreen from '../screens/setup/CanvasSetupScreen';
+import ReportScreen from '../screens/main/ReportScreen';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -130,6 +131,7 @@ const MainStack = () => {
 
       <Stack.Screen name="AddTask" component={AddTaskScreen} />
       <Stack.Screen name="CanvasSetup" component={CanvasSetupScreen} />
+      <Stack.Screen name="Report" component={ReportScreen} />
     </Stack.Navigator>
   );
 };
