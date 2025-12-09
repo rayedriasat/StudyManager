@@ -1,5 +1,5 @@
 import axios, { AxiosResponse } from 'axios';
-import { CanvasAssignment, CanvasCourse } from '../types';
+import { CanvasAssignment, CanvasCourse, CanvasAnnouncement } from '../types';
 
 class CanvasService {
   private baseURL: string;
@@ -39,14 +39,14 @@ class CanvasService {
   async getAssignments(courseId?: number): Promise<CanvasAssignment[]> {
     try {
       let url = `${this.baseURL}/courses`;
-      
+
       if (courseId) {
         url += `/${courseId}/assignments`;
       } else {
         // Get assignments from all courses
         const courses = await this.getCourses();
         const allAssignments: CanvasAssignment[] = [];
-        
+
         for (const course of courses) {
           try {
             const response: AxiosResponse<CanvasAssignment[]> = await axios.get(
@@ -74,7 +74,7 @@ class CanvasService {
           per_page: 100,
         },
       });
-      
+
       return response.data;
     } catch (error) {
       console.error('Error fetching Canvas assignments:', error);
@@ -108,6 +108,31 @@ class CanvasService {
     } catch (error) {
       console.error('Error fetching Canvas todos:', error);
       throw error;
+    }
+  }
+
+  async getAnnouncements(courseIds: number[]): Promise<CanvasAnnouncement[]> {
+    try {
+      if (courseIds.length === 0) return [];
+
+      // Canvas API allows fetching announcements for multiple courses using context_codes
+      const contextCodes = courseIds.map(id => `course_${id}`);
+
+      const response: AxiosResponse<CanvasAnnouncement[]> = await axios.get(
+        `${this.baseURL}/announcements`,
+        {
+          headers: this.getHeaders(),
+          params: {
+            context_codes: contextCodes,
+            start_date: new Date(Date.now() - 30 * 24 * 60 * 60 * 1000).toISOString(), // Last 30 days
+            end_date: new Date().toISOString(),
+          },
+        }
+      );
+      return response.data;
+    } catch (error) {
+      console.error('Error fetching Canvas announcements:', error);
+      return []; // Return empty array on error to safely fail
     }
   }
 

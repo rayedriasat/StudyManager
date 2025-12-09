@@ -18,10 +18,10 @@ import TaskService from '../../services/taskService';
 
 const AddTaskScreen = ({ navigation, route }: any) => {
   const { user } = useAuth();
-  const { selectedDate } = route.params || {};
+  const { selectedDate, initialTitle, initialDescription, canvasLink, source } = route.params || {};
 
-  const [title, setTitle] = useState('');
-  const [description, setDescription] = useState('');
+  const [title, setTitle] = useState(initialTitle || '');
+  const [description, setDescription] = useState(initialDescription || '');
   const [dueDate, setDueDate] = useState(selectedDate ? new Date(selectedDate + 'T12:00:00') : new Date());
   const [priority, setPriority] = useState<Task['priority']>('medium');
   const [showDatePicker, setShowDatePicker] = useState(false);
@@ -70,7 +70,8 @@ const AddTaskScreen = ({ navigation, route }: any) => {
         due_date: dueDate.toISOString(),
         priority,
         status: 'pending',
-        source: 'manual',
+        source: source || 'manual',
+        canvas_assignment_id: canvasLink, // Using this field to store the link for announcements too
       });
 
       // Navigate back to Tasks screen with refresh parameter

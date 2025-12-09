@@ -14,7 +14,7 @@ import {
 } from 'react-native';
 import { MaterialIcons as Icon } from '@expo/vector-icons';
 import { useAuth } from '../../context/AuthContext';
-import { CanvasAssignment, CanvasCourse } from '../../types';
+import { CanvasAssignment, CanvasCourse, CanvasAnnouncement } from '../../types';
 import CanvasService from '../../services/canvasService';
 import TaskService from '../../services/taskService';
 
@@ -24,6 +24,8 @@ const CanvasScreen = ({ navigation }: any) => {
   const [accessToken, setAccessToken] = useState(user?.canvas_token || '');
   const [courses, setCourses] = useState<CanvasCourse[]>([]);
   const [assignments, setAssignments] = useState<CanvasAssignment[]>([]);
+  const [announcements, setAnnouncements] = useState<CanvasAnnouncement[]>([]);
+  const [activeTab, setActiveTab] = useState<'assignments' | 'announcements'>('assignments');
   const [loading, setLoading] = useState(false);
   const [refreshing, setRefreshing] = useState(false);
   const [showSetupModal, setShowSetupModal] = useState(false);
@@ -84,6 +86,12 @@ const CanvasScreen = ({ navigation }: any) => {
 
       setCourses(coursesData);
       setAssignments(assignmentsData);
+
+      // Fetch announcements for active courses
+      if (coursesData.length > 0) {
+        const announcementData = await canvasService.getAnnouncements(coursesData.map(c => c.id));
+        setAnnouncements(announcementData);
+      }
     } catch (error) {
       console.error('Error loading Canvas data:', error);
       Alert.alert('Error', 'Failed to load Canvas data. Please check your connection.');
@@ -148,6 +156,17 @@ const CanvasScreen = ({ navigation }: any) => {
 
   const syncAssignmentToTask = async (assignment: CanvasAssignment) => {
     try {
+      // Check for duplicates
+      const existingTasks = await TaskService.getAllTasks(user!.id);
+      const isDuplicate = existingTasks.some(
+        t => t.source === 'canvas' && t.canvas_assignment_id === assignment.html_url
+      );
+
+      if (isDuplicate) {
+        Alert.alert('Info', 'This assignment is already in your task list.');
+        return;
+      }
+
       await TaskService.createTask({
         user_id: user!.id,
         title: assignment.name,
@@ -171,7 +190,7 @@ const CanvasScreen = ({ navigation }: any) => {
 
     Alert.alert(
       'Sync All Assignments',
-      `This will create ${assignments.length} new tasks. Continue?`,
+      `This will create new tasks for your assignments. Continue?`,
       [
         { text: 'Cancel', style: 'cancel' },
         {
@@ -180,7 +199,24 @@ const CanvasScreen = ({ navigation }: any) => {
             try {
               setLoading(true);
 
+              // Fetch existing tasks to check for duplicates
+              const existingTasks = await TaskService.getAllTasks(user!.id);
+              const existingAssignmentIds = new Set(
+                existingTasks
+                  .filter(t => t.source === 'canvas' && t.canvas_assignment_id)
+                  .map(t => t.canvas_assignment_id)
+              );
+
+              let newTasksCount = 0;
+              let skippedCount = 0;
+
               for (const assignment of assignments) {
+                // Check if assignment already exists (using html_url as ID)
+                if (assignment.html_url && existingAssignmentIds.has(assignment.html_url)) {
+                  skippedCount++;
+                  continue;
+                }
+
                 await TaskService.createTask({
                   user_id: user!.id,
                   title: assignment.name,
@@ -191,10 +227,13 @@ const CanvasScreen = ({ navigation }: any) => {
                   source: 'canvas',
                   canvas_assignment_id: assignment.html_url,
                 });
+                newTasksCount++;
               }
 
-              Alert.alert('Success', `${assignments.length} assignments synced successfully!`);
-              navigation.navigate('Tasks');
+              Alert.alert('Success', `${newTasksCount} new tasks synced. ${skippedCount} duplicates skipped.`);
+              if (newTasksCount > 0) {
+                navigation.navigate('Tasks', { refresh: true });
+              }
             } catch (error) {
               console.error('Error syncing all assignments:', error);
               Alert.alert('Error', 'Failed to sync some assignments');
@@ -286,6 +325,79 @@ const CanvasScreen = ({ navigation }: any) => {
             ) : null}
           </View>
         )}
+      </Animated.View>
+    );
+  };
+
+  const AnnouncementCard = ({ announcement, index }: { announcement: CanvasAnnouncement; index: number }) => {
+    const cardAnim = useRef(new Animated.Value(0)).current;
+
+    useEffect(() => {
+      Animated.timing(cardAnim, {
+        toValue: 1,
+        duration: 600,
+        delay: index * 100,
+        useNativeDriver: true,
+      }).start();
+    }, []);
+
+    const stripHtml = (html: string) => {
+      return html.replace(/<[^>]*>?/gm, '').trim();
+    };
+
+    return (
+      <Animated.View
+        style={[
+          styles.assignmentCard,
+          {
+            opacity: cardAnim,
+            transform: [
+              {
+                translateY: cardAnim.interpolate({
+                  inputRange: [0, 1],
+                  outputRange: [20, 0],
+                }),
+              },
+            ],
+          },
+        ]}
+      >
+        <View style={styles.assignmentHeader}>
+          <View style={styles.assignmentInfo}>
+            <Text style={styles.assignmentTitle} numberOfLines={2}>
+              {announcement.title}
+            </Text>
+            <Text style={styles.courseName}>
+              Posted: {new Date(announcement.posted_at).toLocaleDateString()}
+            </Text>
+            <Text style={styles.description} numberOfLines={2}>
+              {stripHtml(announcement.message)}
+            </Text>
+          </View>
+
+          <View style={styles.assignmentActions}>
+            <TouchableOpacity
+              style={styles.actionButton}
+              onPress={() => handleOpenLink(announcement.html_url)}
+            >
+              <Icon name="open-in-browser" size={20} color="#6366F1" />
+            </TouchableOpacity>
+
+            <TouchableOpacity
+              style={styles.actionButton}
+              onPress={() => {
+                navigation.navigate('AddTask', {
+                  initialTitle: `Read: ${announcement.title}`,
+                  initialDescription: `Source: ${announcement.html_url}\n\n${stripHtml(announcement.message)}`,
+                  source: 'canvas',
+                  canvasLink: announcement.html_url
+                });
+              }}
+            >
+              <Icon name="add-task" size={20} color="#10B981" />
+            </TouchableOpacity>
+          </View>
+        </View>
       </Animated.View>
     );
   };
@@ -438,6 +550,22 @@ const CanvasScreen = ({ navigation }: any) => {
           </View>
         </View>
 
+        {/* Tab Selector */}
+        <View style={styles.tabContainer}>
+          <TouchableOpacity
+            style={[styles.tabButton, activeTab === 'assignments' && styles.activeTabButton]}
+            onPress={() => setActiveTab('assignments')}
+          >
+            <Text style={[styles.tabText, activeTab === 'assignments' && styles.activeTabText]}>Assignments</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={[styles.tabButton, activeTab === 'announcements' && styles.activeTabButton]}
+            onPress={() => setActiveTab('announcements')}
+          >
+            <Text style={[styles.tabText, activeTab === 'announcements' && styles.activeTabText]}>Announcements</Text>
+          </TouchableOpacity>
+        </View>
+
         <ScrollView
           showsVerticalScrollIndicator={false}
           refreshControl={
@@ -458,13 +586,17 @@ const CanvasScreen = ({ navigation }: any) => {
             </View>
 
             <View style={styles.statCard}>
-              <Text style={styles.statValue}>{assignments.length}</Text>
-              <Text style={styles.statLabel}>Upcoming Assignments</Text>
+              <Text style={styles.statValue}>
+                {activeTab === 'assignments' ? assignments.length : announcements.length}
+              </Text>
+              <Text style={styles.statLabel}>
+                {activeTab === 'assignments' ? 'Upcoming Assignments' : 'Recent Announcements'}
+              </Text>
             </View>
 
           </View>
 
-          {/* Courses Section */}
+          {/* Courses Section - Always visible */}
           <View style={styles.assignmentsSection}>
             <Text style={styles.sectionTitle}>Your Courses</Text>
             {courses.length > 0 ? (
@@ -493,38 +625,59 @@ const CanvasScreen = ({ navigation }: any) => {
             )}
           </View>
 
+          {activeTab === 'assignments' ? (
+            <>
+              {/* Sync Actions */}
+              {assignments.length > 0 ? (
+                <View style={styles.syncContainer}>
+                  <TouchableOpacity
+                    style={styles.syncAllButton}
+                    onPress={syncAllAssignments}
+                  >
+                    <Icon name="sync" size={20} color="#FFFFFF" />
+                    <Text style={styles.syncAllText}>Sync All Assignments</Text>
+                  </TouchableOpacity>
+                </View>
+              ) : null}
 
-          {/* Sync Actions */}
-          {assignments.length > 0 ? (
-            <View style={styles.syncContainer}>
-              <TouchableOpacity
-                style={styles.syncAllButton}
-                onPress={syncAllAssignments}
-              >
-                <Icon name="sync" size={20} color="#FFFFFF" />
-                <Text style={styles.syncAllText}>Sync All Assignments</Text>
-              </TouchableOpacity>
-            </View>
-          ) : null}
+              {/* Assignments */}
+              <View style={styles.assignmentsSection}>
+                <Text style={styles.sectionTitle}>Upcoming Assignments</Text>
 
-          {/* Assignments */}
-          <View style={styles.assignmentsSection}>
-            <Text style={styles.sectionTitle}>Upcoming Assignments</Text>
-
-            {assignments.length > 0 ? (
-              assignments.map((assignment, index) => (
-                <AssignmentCard key={`assignment-${assignment.id}`} assignment={assignment} index={index} />
-              ))
-            ) : (
-              <View style={styles.emptyState}>
-                <Icon name="assignment-turned-in" size={48} color="#D1D5DB" />
-                <Text style={styles.emptyStateTitle}>No upcoming assignments</Text>
-                <Text style={styles.emptyStateSubtitle}>
-                  All caught up! Check back later for new assignments.
-                </Text>
+                {assignments.length > 0 ? (
+                  assignments.map((assignment, index) => (
+                    <AssignmentCard key={`assignment-${assignment.id}`} assignment={assignment} index={index} />
+                  ))
+                ) : (
+                  <View style={styles.emptyState}>
+                    <Icon name="assignment-turned-in" size={48} color="#D1D5DB" />
+                    <Text style={styles.emptyStateTitle}>No upcoming assignments</Text>
+                    <Text style={styles.emptyStateSubtitle}>
+                      All caught up! Check back later for new assignments.
+                    </Text>
+                  </View>
+                )}
               </View>
-            )}
-          </View>
+            </>
+          ) : (
+            /* Announcements */
+            <View style={styles.assignmentsSection}>
+              <Text style={styles.sectionTitle}>Recent Announcements</Text>
+              {announcements.length > 0 ? (
+                announcements.map((announcement, index) => (
+                  <AnnouncementCard key={`announcement-${announcement.id}`} announcement={announcement} index={index} />
+                ))
+              ) : (
+                <View style={styles.emptyState}>
+                  <Icon name="campaign" size={48} color="#D1D5DB" />
+                  <Text style={styles.emptyStateTitle}>No recent announcements</Text>
+                  <Text style={styles.emptyStateSubtitle}>
+                    Check back later for new course updates.
+                  </Text>
+                </View>
+              )}
+            </View>
+          )}
         </ScrollView>
       </Animated.View>
       <SetupModal />
@@ -625,6 +778,35 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.1,
     shadowRadius: 4,
     elevation: 3,
+  },
+  tabContainer: {
+    flexDirection: 'row',
+    paddingHorizontal: 20,
+    marginBottom: 16,
+    gap: 12,
+  },
+  tabButton: {
+    flex: 1,
+    paddingVertical: 10,
+    alignItems: 'center',
+    borderBottomWidth: 2,
+    borderBottomColor: 'transparent',
+  },
+  activeTabButton: {
+    borderBottomColor: '#6366F1',
+  },
+  tabText: {
+    fontSize: 16,
+    fontWeight: '600',
+    color: '#6B7280',
+  },
+  activeTabText: {
+    color: '#6366F1',
+  },
+  description: {
+    fontSize: 12,
+    color: '#4B5563',
+    marginTop: 4,
   },
   scrollContent: {
     paddingHorizontal: 20,

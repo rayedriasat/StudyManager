@@ -35,6 +35,19 @@ export interface CanvasAssignment {
   submission_types: string[];
 }
 
+export interface CanvasAnnouncement {
+  id: number;
+  title: string;
+  message: string;
+  posted_at: string;
+  author: {
+    display_name: string;
+    avatar_image_url: string;
+  };
+  html_url: string;
+  context_code: string;
+}
+
 export interface CanvasCourse {
   id: number;
   name: string;
