@@ -11,7 +11,7 @@ import {
   Animated,
   ScrollView,
 } from 'react-native';
-import Icon from 'react-native-vector-icons/MaterialIcons';
+import { MaterialIcons as Icon } from '@expo/vector-icons';
 import { useAuth } from '../../context/AuthContext';
 
 const RegisterScreen = ({ navigation }: any) => {
@@ -22,9 +22,9 @@ const RegisterScreen = ({ navigation }: any) => {
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [loading, setLoading] = useState(false);
-  
+
   const { signUp } = useAuth();
-  
+
   const fadeAnim = useRef(new Animated.Value(0)).current;
   const slideAnim = useRef(new Animated.Value(50)).current;
 
@@ -94,7 +94,7 @@ const RegisterScreen = ({ navigation }: any) => {
             >
               <Icon name="arrow-back" size={24} color="#6B7280" />
             </TouchableOpacity>
-            
+
             <View style={styles.logoContainer}>
               <Text style={styles.logoText}>📚</Text>
             </View>

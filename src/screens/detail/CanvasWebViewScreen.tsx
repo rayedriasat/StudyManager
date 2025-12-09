@@ -10,7 +10,7 @@ import {
   Share,
 } from 'react-native';
 import { WebView } from 'react-native-webview';
-import Icon from 'react-native-vector-icons/MaterialIcons';
+import { MaterialIcons as Icon } from '@expo/vector-icons';
 
 const CanvasWebViewScreen = ({ navigation, route }: any) => {
   const { url, title } = route.params;
@@ -18,7 +18,7 @@ const CanvasWebViewScreen = ({ navigation, route }: any) => {
   const [progress, setProgress] = useState(0);
   const [canGoBack, setCanGoBack] = useState(false);
   const [canGoForward, setCanGoForward] = useState(false);
-  
+
   const webViewRef = useRef<WebView>(null);
   const progressAnim = useRef(new Animated.Value(0)).current;
   const fadeAnim = useRef(new Animated.Value(0)).current;
@@ -70,7 +70,7 @@ const CanvasWebViewScreen = ({ navigation, route }: any) => {
   return (
     <Animated.View style={[styles.container, { opacity: fadeAnim }]}>
       <StatusBar barStyle="light-content" backgroundColor="#6366F1" />
-      
+
       {/* Header */}
       <View style={styles.header}>
         <View style={styles.headerLeft}>
@@ -80,7 +80,7 @@ const CanvasWebViewScreen = ({ navigation, route }: any) => {
           >
             <Icon name="arrow-back" size={24} color="#FFFFFF" />
           </TouchableOpacity>
-          
+
           <View style={styles.titleContainer}>
             <Text style={styles.headerTitle} numberOfLines={1}>
               {title || 'Canvas'}
@@ -98,7 +98,7 @@ const CanvasWebViewScreen = ({ navigation, route }: any) => {
           >
             <Icon name="share" size={20} color="#FFFFFF" />
           </TouchableOpacity>
-          
+
           <TouchableOpacity
             style={styles.headerButton}
             onPress={handleRefresh}

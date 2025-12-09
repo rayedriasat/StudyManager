@@ -10,7 +10,7 @@ import {
   Modal,
   TextInput,
 } from 'react-native';
-import Icon from 'react-native-vector-icons/MaterialIcons';
+import { MaterialIcons as Icon } from '@expo/vector-icons';
 import { useAuth } from '../../context/AuthContext';
 
 const ProfileScreen = ({ navigation }: any) => {
@@ -129,7 +129,7 @@ const ProfileScreen = ({ navigation }: any) => {
               >
                 <Text style={styles.modalCancelText}>Cancel</Text>
               </TouchableOpacity>
-              
+
               <TouchableOpacity
                 style={[styles.modalSaveButton, loading && styles.modalSaveButtonDisabled]}
                 onPress={handleUpdateProfile}
@@ -172,7 +172,7 @@ const ProfileScreen = ({ navigation }: any) => {
                 </Text>
               </View>
             </View>
-            
+
             <View style={styles.profileInfo}>
               <Text style={styles.profileName}>{user?.name || 'User'}</Text>
               <Text style={styles.profileEmail}>{user?.email}</Text>
@@ -192,7 +192,7 @@ const ProfileScreen = ({ navigation }: any) => {
           {/* Account Section */}
           <View style={styles.section}>
             <Text style={styles.sectionTitle}>Account</Text>
-            
+
             <View style={styles.sectionContent}>
               <ProfileOption
                 icon="school"
@@ -201,7 +201,7 @@ const ProfileScreen = ({ navigation }: any) => {
                 color="#8B5CF6"
                 onPress={() => navigation.navigate('Canvas')}
               />
-              
+
               <ProfileOption
                 icon="event"
                 title="Google Calendar"
@@ -215,7 +215,7 @@ const ProfileScreen = ({ navigation }: any) => {
           {/* App Section */}
           <View style={styles.section}>
             <Text style={styles.sectionTitle}>App</Text>
-            
+
             <View style={styles.sectionContent}>
               <ProfileOption
                 icon="notifications"
@@ -224,7 +224,7 @@ const ProfileScreen = ({ navigation }: any) => {
                 color="#F59E0B"
                 onPress={() => Alert.alert('Coming Soon', 'Notification settings will be available in a future update.')}
               />
-              
+
               <ProfileOption
                 icon="backup"
                 title="Data Export"
@@ -232,7 +232,7 @@ const ProfileScreen = ({ navigation }: any) => {
                 color="#3B82F6"
                 onPress={() => Alert.alert('Coming Soon', 'Data export will be available in a future update.')}
               />
-              
+
               <ProfileOption
                 icon="help"
                 title="Help & Support"
@@ -246,7 +246,7 @@ const ProfileScreen = ({ navigation }: any) => {
           {/* About Section */}
           <View style={styles.section}>
             <Text style={styles.sectionTitle}>About</Text>
-            
+
             <View style={styles.sectionContent}>
               <ProfileOption
                 icon="info"
@@ -254,16 +254,16 @@ const ProfileScreen = ({ navigation }: any) => {
                 subtitle="1.0.0"
                 color="#6B7280"
                 showArrow={false}
-                onPress={() => {}}
+                onPress={() => { }}
               />
-              
+
               <ProfileOption
                 icon="gavel"
                 title="Terms of Service"
                 color="#6B7280"
                 onPress={() => Alert.alert('Terms of Service', 'Terms of Service will be displayed here.')}
               />
-              
+
               <ProfileOption
                 icon="privacy-tip"
                 title="Privacy Policy"

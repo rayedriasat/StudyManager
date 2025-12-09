@@ -9,7 +9,7 @@ import {
   Animated,
   Modal,
 } from 'react-native';
-import Icon from 'react-native-vector-icons/MaterialIcons';
+import { MaterialIcons as Icon } from '@expo/vector-icons';
 import { useAuth } from '../../context/AuthContext';
 import { Task } from '../../types';
 import TaskService from '../../services/taskService';
@@ -114,7 +114,7 @@ const TaskDetailScreen = ({ navigation, route }: any) => {
       <View style={styles.modalOverlay}>
         <View style={styles.statusModal}>
           <Text style={styles.modalTitle}>Update Status</Text>
-          
+
           {statuses.map((status) => (
             <TouchableOpacity
               key={status.key}
@@ -132,7 +132,7 @@ const TaskDetailScreen = ({ navigation, route }: any) => {
               )}
             </TouchableOpacity>
           ))}
-          
+
           <TouchableOpacity
             style={styles.modalCancelButton}
             onPress={() => setShowStatusModal(false)}
@@ -165,9 +165,9 @@ const TaskDetailScreen = ({ navigation, route }: any) => {
           >
             <Icon name="arrow-back" size={24} color="#1F2937" />
           </TouchableOpacity>
-          
+
           <Text style={styles.headerTitle}>Task Details</Text>
-          
+
           <TouchableOpacity
             style={styles.deleteButton}
             onPress={deleteTask}
@@ -180,7 +180,7 @@ const TaskDetailScreen = ({ navigation, route }: any) => {
           {/* Task Card */}
           <View style={[styles.taskCard, isOverdue && styles.overdueTaskCard]}>
             <Text style={styles.taskTitle}>{task.title}</Text>
-            
+
             {task.description && (
               <Text style={styles.taskDescription}>{task.description}</Text>
             )}
@@ -192,7 +192,7 @@ const TaskDetailScreen = ({ navigation, route }: any) => {
                     {task.priority.toUpperCase()} PRIORITY
                   </Text>
                 </View>
-                
+
                 <TouchableOpacity
                   style={[styles.statusBadge, { backgroundColor: getStatusColor(task.status) + '20' }]}
                   onPress={() => setShowStatusModal(true)}
@@ -221,19 +221,19 @@ const TaskDetailScreen = ({ navigation, route }: any) => {
               <Icon
                 name={
                   task.source === 'canvas' ? 'school' :
-                  task.source === 'google_calendar' ? 'event' : 'edit'
+                    task.source === 'google_calendar' ? 'event' : 'edit'
                 }
                 size={20}
                 color="#6366F1"
               />
               <Text style={styles.infoTitle}>
                 {task.source === 'canvas' ? 'Canvas Assignment' :
-                 task.source === 'google_calendar' ? 'Google Calendar Event' : 'Manual Task'}
+                  task.source === 'google_calendar' ? 'Google Calendar Event' : 'Manual Task'}
               </Text>
             </View>
-            
+
             <Text style={styles.infoDescription}>
-              {task.source === 'canvas' 
+              {task.source === 'canvas'
                 ? 'This task was synced from Canvas LMS'
                 : task.source === 'google_calendar'
                   ? 'This task was synced from Google Calendar'
@@ -258,7 +258,7 @@ const TaskDetailScreen = ({ navigation, route }: any) => {
           {/* Task Timeline */}
           <View style={styles.timelineCard}>
             <Text style={styles.timelineTitle}>Task Timeline</Text>
-            
+
             <View style={styles.timelineItem}>
               <View style={styles.timelineIcon}>
                 <Icon name="add-circle" size={16} color="#10B981" />

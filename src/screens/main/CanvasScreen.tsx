@@ -11,7 +11,7 @@ import {
   RefreshControl,
   Modal,
 } from 'react-native';
-import Icon from 'react-native-vector-icons/MaterialIcons';
+import { MaterialIcons as Icon } from '@expo/vector-icons';
 import { useAuth } from '../../context/AuthContext';
 import { CanvasAssignment, CanvasCourse } from '../../types';
 import CanvasService from '../../services/canvasService';
@@ -58,7 +58,7 @@ const CanvasScreen = ({ navigation }: any) => {
         const canvasService = new CanvasService(user.canvas_url, user.canvas_token);
         const isValid = await canvasService.validateToken();
         setIsConnected(isValid);
-        
+
         if (isValid) {
           loadCanvasData();
         }
@@ -75,7 +75,7 @@ const CanvasScreen = ({ navigation }: any) => {
     try {
       setLoading(true);
       const canvasService = new CanvasService(user.canvas_url, user.canvas_token);
-      
+
       const [coursesData, assignmentsData] = await Promise.all([
         canvasService.getCourses(),
         canvasService.getUpcomingAssignments(30),
@@ -162,7 +162,7 @@ const CanvasScreen = ({ navigation }: any) => {
           onPress: async () => {
             try {
               setLoading(true);
-              
+
               for (const assignment of assignments) {
                 await TaskService.createTask({
                   user_id: user!.id,
@@ -232,18 +232,18 @@ const CanvasScreen = ({ navigation }: any) => {
               Course ID: {assignment.course_id}
             </Text>
           </View>
-          
+
           <View style={styles.assignmentActions}>
             <TouchableOpacity
               style={styles.actionButton}
-              onPress={() => navigation.navigate('CanvasWebView', { 
+              onPress={() => navigation.navigate('CanvasWebView', {
                 url: assignment.html_url,
                 title: assignment.name,
               })}
             >
               <Icon name="open-in-browser" size={20} color="#6366F1" />
             </TouchableOpacity>
-            
+
             <TouchableOpacity
               style={styles.actionButton}
               onPress={() => syncAssignmentToTask(assignment)}
@@ -257,9 +257,9 @@ const CanvasScreen = ({ navigation }: any) => {
           <View style={styles.assignmentMeta}>
             <Icon name="schedule" size={16} color={isOverdue ? '#EF4444' : '#6B7280'} />
             <Text style={[styles.dueDate, isOverdue && styles.overdueDueDate]}>
-              {isOverdue 
+              {isOverdue
                 ? `Overdue by ${Math.abs(dueIn!)} days`
-                : dueIn! <= 0 
+                : dueIn! <= 0
                   ? 'Due today'
                   : `Due in ${dueIn} days`
               }
@@ -295,7 +295,7 @@ const CanvasScreen = ({ navigation }: any) => {
             </TouchableOpacity>
           </View>
 
-          <ScrollView 
+          <ScrollView
             style={{ flex: 1 }}
             contentContainerStyle={{ padding: 20 }}
             showsVerticalScrollIndicator={false}
@@ -371,7 +371,7 @@ const CanvasScreen = ({ navigation }: any) => {
           <Text style={styles.setupSubtitle}>
             Sync your assignments and stay on top of your coursework
           </Text>
-          
+
           <TouchableOpacity
             style={styles.connectButton}
             onPress={() => setShowSetupModal(true)}
@@ -413,7 +413,7 @@ const CanvasScreen = ({ navigation }: any) => {
               <Text style={styles.connectionText}>Connected</Text>
             </View>
           </View>
-          
+
           <View style={styles.headerActions}>
             <TouchableOpacity
               style={styles.headerButton}
@@ -442,7 +442,7 @@ const CanvasScreen = ({ navigation }: any) => {
               <Text style={styles.statValue}>{courses.length}</Text>
               <Text style={styles.statLabel}>Active Courses</Text>
             </View>
-            
+
             <View style={styles.statCard}>
               <Text style={styles.statValue}>{assignments.length}</Text>
               <Text style={styles.statLabel}>Upcoming Assignments</Text>
@@ -465,7 +465,7 @@ const CanvasScreen = ({ navigation }: any) => {
           {/* Assignments */}
           <View style={styles.assignmentsSection}>
             <Text style={styles.sectionTitle}>Upcoming Assignments</Text>
-            
+
             {assignments.length > 0 ? (
               assignments.map((assignment, index) => (
                 <AssignmentCard key={`assignment-${assignment.id}`} assignment={assignment} index={index} />

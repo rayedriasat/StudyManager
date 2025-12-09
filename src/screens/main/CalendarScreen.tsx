@@ -10,7 +10,7 @@ import {
   RefreshControl,
 } from 'react-native';
 import { Calendar } from 'react-native-calendars';
-import Icon from 'react-native-vector-icons/MaterialIcons';
+import { MaterialIcons as Icon } from '@expo/vector-icons';
 import { GoogleSignin, statusCodes, isSuccessResponse, isExpoGo } from '../../utils/googleSignInConfig';
 import { useAuth } from '../../context/AuthContext';
 import { Task } from '../../types';

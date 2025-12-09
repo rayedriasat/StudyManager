@@ -10,7 +10,7 @@ import {
   Modal,
   Alert,
 } from 'react-native';
-import Icon from 'react-native-vector-icons/MaterialIcons';
+import { MaterialIcons as Icon } from '@expo/vector-icons';
 import { useAuth } from '../../context/AuthContext';
 import { Task } from '../../types';
 import TaskService from '../../services/taskService';
@@ -53,14 +53,14 @@ const getStatusIcon = (status: Task['status']) => {
 };
 
 // Moved TaskItem outside of TasksScreen to prevent invalid hook call error
-const TaskItem = ({ 
-  item, 
-  index, 
-  navigation, 
-  updateTaskStatus, 
+const TaskItem = ({
+  item,
+  index,
+  navigation,
+  updateTaskStatus,
   deleteTask
-}: { 
-  item: Task; 
+}: {
+  item: Task;
   index: number;
   navigation: any;
   updateTaskStatus: (taskId: string, status: Task['status']) => Promise<void>;
@@ -134,7 +134,7 @@ const TaskItem = ({
           <Text style={[styles.taskTitle, item.status === 'completed' && styles.completedTask]}>
             {item.title}
           </Text>
-          
+
           <View style={styles.taskMeta}>
             <View style={styles.badges}>
               <View style={[styles.priorityBadge, { backgroundColor: getPriorityColor(item.priority) + '20' }]}>
@@ -142,7 +142,7 @@ const TaskItem = ({
                   {item.priority.toUpperCase()}
                 </Text>
               </View>
-              
+
               <View style={styles.sourceBadge}>
                 <Icon
                   name={item.source === 'canvas' ? 'school' : item.source === 'google_calendar' ? 'event' : 'edit'}
@@ -259,7 +259,7 @@ const TasksScreen = ({ navigation, route }: any) => {
 
   const applyFilter = () => {
     let filtered = [...tasks];
-    
+
     switch (selectedFilter) {
       case 'pending':
         filtered = tasks.filter(task => task.status === 'pending');
@@ -350,7 +350,7 @@ const TasksScreen = ({ navigation, route }: any) => {
               <Icon name="close" size={24} color="#6B7280" />
             </TouchableOpacity>
           </View>
-          
+
           <View style={styles.filterOptions}>
             {filters.map((filter) => (
               <TouchableOpacity
@@ -409,7 +409,7 @@ const TasksScreen = ({ navigation, route }: any) => {
               {filteredTasks.length} {currentFilter?.label.toLowerCase() || 'tasks'}
             </Text>
           </View>
-          
+
           <View style={styles.headerButtons}>
             <TouchableOpacity
               style={styles.filterButton}
@@ -417,7 +417,7 @@ const TasksScreen = ({ navigation, route }: any) => {
             >
               <Icon name="filter-list" size={20} color="#6366F1" />
             </TouchableOpacity>
-            
+
             <TouchableOpacity
               style={styles.addButton}
               onPress={() => navigation.navigate('AddTask')}
@@ -477,7 +477,7 @@ const TasksScreen = ({ navigation, route }: any) => {
                   {selectedFilter === 'all' ? 'No tasks yet' : `No ${currentFilter?.label.toLowerCase()}`}
                 </Text>
                 <Text style={styles.emptyStateSubtitle}>
-                  {selectedFilter === 'all' 
+                  {selectedFilter === 'all'
                     ? 'Create your first task or sync with Canvas'
                     : `Try a different filter or create a new task`
                   }

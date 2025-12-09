@@ -10,7 +10,7 @@ import {
   Animated,
   Modal,
 } from 'react-native';
-import Icon from 'react-native-vector-icons/MaterialIcons';
+import { MaterialIcons as Icon } from '@expo/vector-icons';
 import DatePicker from 'react-native-date-picker';
 import { useAuth } from '../../context/AuthContext';
 import { Task } from '../../types';
@@ -19,7 +19,7 @@ import TaskService from '../../services/taskService';
 const AddTaskScreen = ({ navigation, route }: any) => {
   const { user } = useAuth();
   const { selectedDate } = route.params || {};
-  
+
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [dueDate, setDueDate] = useState(selectedDate ? new Date(selectedDate + 'T12:00:00') : new Date());
@@ -104,7 +104,7 @@ const AddTaskScreen = ({ navigation, route }: any) => {
               <Icon name="close" size={24} color="#6B7280" />
             </TouchableOpacity>
           </View>
-          
+
           <View style={styles.priorityOptions}>
             {priorities.map((item) => (
               <TouchableOpacity
@@ -161,9 +161,9 @@ const AddTaskScreen = ({ navigation, route }: any) => {
           >
             <Icon name="arrow-back" size={24} color="#1F2937" />
           </TouchableOpacity>
-          
+
           <Text style={styles.headerTitle}>Add Task</Text>
-          
+
           <TouchableOpacity
             style={[styles.saveButton, loading && styles.saveButtonDisabled]}
             onPress={handleSave}
@@ -268,7 +268,7 @@ const AddTaskScreen = ({ navigation, route }: any) => {
             >
               <Text style={styles.secondaryButtonText}>Cancel</Text>
             </TouchableOpacity>
-            
+
             <TouchableOpacity
               style={[styles.primaryButton, loading && styles.primaryButtonDisabled]}
               onPress={handleSave}

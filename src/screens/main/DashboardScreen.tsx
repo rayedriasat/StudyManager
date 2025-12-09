@@ -9,7 +9,7 @@ import {
   Dimensions,
   RefreshControl,
 } from 'react-native';
-import Icon from 'react-native-vector-icons/MaterialIcons';
+import { MaterialIcons as Icon } from '@expo/vector-icons';
 import { useAuth } from '../../context/AuthContext';
 import { Task } from '../../types';
 import TaskService from '../../services/taskService';
@@ -30,8 +30,13 @@ const DashboardScreen = ({ navigation }: any) => {
 
   useEffect(() => {
     loadDashboardData();
-    animateContent();
   }, [user]);
+
+  useEffect(() => {
+    if (!loading) {
+      animateContent();
+    }
+  }, [loading]);
 
   const animateContent = () => {
     Animated.parallel([
@@ -188,7 +193,7 @@ const DashboardScreen = ({ navigation }: any) => {
               color="#6B7280"
             />
           </View>
-          
+
           {task.due_date && (
             <View style={styles.taskCardFooter}>
               <Icon name="schedule" size={16} color="#6B7280" />
@@ -298,7 +303,7 @@ const DashboardScreen = ({ navigation }: any) => {
               <Icon name="add-task" size={24} color="#6366F1" />
               <Text style={styles.quickActionText}>Add Task</Text>
             </TouchableOpacity>
-            
+
             <TouchableOpacity
               style={styles.quickActionButton}
               onPress={() => navigation.navigate('Canvas')}
@@ -306,7 +311,7 @@ const DashboardScreen = ({ navigation }: any) => {
               <Icon name="school" size={24} color="#6366F1" />
               <Text style={styles.quickActionText}>Sync Canvas</Text>
             </TouchableOpacity>
-            
+
             <TouchableOpacity
               style={styles.quickActionButton}
               onPress={() => navigation.navigate('Calendar')}
